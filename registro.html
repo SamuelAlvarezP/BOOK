@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registro BOOK</title>
+	<meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=3.0, minimum-scale=1.0">
+	 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+	 <meta charset="utf-8">
+	 <link rel="stylesheet" type="text/css" href="css/estilos.css">
+</head>
+<body>
+<header>
+</header>
+<form class="formulario" method="post" action="insertar.php">
+	<div class="contenedor">
+		<a href="file:///C:/Users/samue/OneDrive/BOOK/index.html"><i class="fas fa-arrow-left"></i></a>
+		<h1 class="titulo">Bienvenido al registro de BOOK!</h1>
+		<div class="input-contenedor">
+     
+			<select>
+				<option>Tipo de Documento</option>
+				<option>Tarjeta de Identidad</option>
+				<option>Cedula de Ciudadanía</option>
+				<option>Cedula de Extranjería</option>
+			</select>
+		</div>
+		<div class="input-contenedor">
+			<i class="fas fa-id-card-alt icon"></i>
+			<input type="text" name="numero_de_documento" placeholder="Numero de Identificación">
+
+		</div>
+		<div class="input-contenedor">
+			<i class="fas fa-user icon"></i>
+			 <input type="text" name="nombre" placeholder="Nombres">
+         
+      </div>
+      <div class="input-contenedor">
+         
+         <i class="fas fa-user icon"></i>
+         <input type="text" name="apellidos" placeholder="Apellidos">
+         
+      </div>
+
+      <div class="input-genero input-contenedor">
+         
+            <i class="fas fa-restroom icon"></i>       
+            <input type="Radio" name="sexo" value="hombre" id="hombre"><p>Hombre</p>
+            <input type="Radio" name="sexo"  value="mujer" id="mujer"><p>Mujer</p>
+      
+      </div>
+      <div class="input-contenedor">
+         
+         <i class="fas fa-calendar-alt icon"></i>
+         <input type="text" name="edad" placeholder="Edad">
+         
+      </div>
+         
+      <div class="input-contenedor">
+         <i class="fas fa-paper-plane icon "></i>
+         <input type="text" name="usuario" placeholder="Usuario">
+      </div>
+
+      <div class="input-contenedor">
+         <i class="fas fa-child icon"></i>
+         <input type="password" name="clave" placeholder="Contraseña">
+      </div>
+      <div class="input-contenedor">
+            
+            <select name="rol">
+            
+                <option>Seleccione un rol</option>
+                <option>Estudiante</option>
+                <option>Maestro</option>
+                <option>Acudiente</option>
+            </select>
+         
+         </div>
+
+      <br>
+      
+      <input type="submit" value="Guardar" class="button"> 
+
+     </div>
+   </form>
+		</div>
+	</div>
+</form>
+</body>
+</html>

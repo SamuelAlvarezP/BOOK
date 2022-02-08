@@ -1,0 +1,146 @@
+.canvas-1 {
+    width: 2952px;
+    height: 1374px;
+    border-color: #c9d3dd;
+    border-width: 2px;
+    border-style: solid;
+}
+.header-1 {
+    width: 716px;
+    height: 87px;
+    color: #29323d;
+    font-family: "Nunito Sans";
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 1.3;
+    letter-spacing: -1px;
+    text-align: left;
+}
+.rectangle-1 {
+    width: 575px;
+    height: 1370px;
+    padding: 8px 8px 8px 8px;
+    background: #eef1f5;
+}
+.avatar-png-1 {
+    width: 256px;
+    height: 256px;
+}
+.heading-2 {
+    width: 430px;
+    height: 56px;
+    color: #455a64;
+    font-family: "Open Sans";
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+}
+.sticky-note-26 {
+    width: 200px;
+    height: 200px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.06);
+    background: #FFFFCC;
+    font-size: 14px;
+    text-align: left;
+}
+.paragraph-6 {
+    width: 439px;
+    height: 112px;
+    color: #798da3;
+    font-family: "Nunito Sans";
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 1.4;
+    text-align: left;
+}
+.sticky-note-25 {
+    width: 200px;
+    height: 200px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.06);
+    background: #DFF3FD;
+    font-size: 14px;
+    text-align: left;
+}
+.sticky-note-27 {
+    width: 200px;
+    height: 200px;
+    box-shadow: 4px 4px 5px rgba(0, 0, 0, 0.06);
+    background: #FFFFCC;
+    font-size: 14px;
+    text-align: left;
+}
+.progress-bar-1 {
+    width: 444px;
+    height: 25px;
+    background: #cde7ff;
+}
+.paragraph-3 {
+    width: 400px;
+    height: 21px;
+    color: #455a64;
+    font-family: "Nunito Sans";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: left;
+}
+.progress-bar-2 {
+    width: 444px;
+    height: 25px;
+    background: #dceec6;
+}
+.paragraph-4 {
+    width: 400px;
+    height: 21px;
+    color: #455a64;
+    font-family: "Nunito Sans";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: left;
+}
+.progress-bar-3 {
+    width: 444px;
+    height: 25px;
+    background: #e0dafd;
+}
+.paragraph-5 {
+    width: 400px;
+    height: 21px;
+    color: #455a64;
+    font-family: "Nunito Sans";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: left;
+}
+.progress-bar-4 {
+    width: 444px;
+    height: 25px;
+    background: #fad5c5;
+}
+.paragraph-7 {
+    width: 400px;
+    height: 21px;
+    color: #455a64;
+    font-family: "Nunito Sans";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: left;
+}
+.progress-bar-5 {
+    width: 444px;
+    height: 25px;
+    background: #bce6ec;
+}
+.paragraph-8 {
+    width: 400px;
+    height: 21px;
+    color: #455a64;
+    font-family: "Nunito Sans";
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.3;
+    text-align: left;
+}
