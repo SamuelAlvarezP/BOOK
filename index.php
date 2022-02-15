@@ -173,25 +173,7 @@
           <div class="u-layout">
             <div class="u-layout-row">
               <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-1">
-                <div class="u-container-layout u-container-layout-1">
-                  <h2 class="u-align-left u-text u-text-1"><b>Un poco sobre BOOK</b>
-                  </h2>
-                  <p class="u-align-justify u-text u-text-2">BOOK es la nueva aplicación en la que puedes iniciar, ver y controlar el progreso de los estudiantes de tu grupo, para que así puedas ayudarles a conseguir un mejor desempeño en las áreas de lectura y escritura, para prepararlos así para su furuto escolar&nbsp;</p>
-                </div>
-              </div>
-              <div class="u-align-justify u-container-style u-layout-cell u-size-30 u-layout-cell-2">
-                <div class="u-container-layout u-valign-bottom u-container-layout-2">
-                  <div class="u-shape u-shape-svg u-text-palette-4-base u-shape-1">
-                    <svg class="u-svg-link" preserveAspectRatio="none" viewBox="0 0 160 50" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1a12"></use></svg>
-                    <svg class="u-svg-content" viewBox="0 0 160 50" x="0px" y="0px" id="svg-1a12" style="enable-background:new 0 0 160 50;"><path d="M133,26.7c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,22
-	c11.2-7.8,20.6-8.1,32.2,0c11,7.6,19,8.5,31.3,0c11.6-8.1,22.4-7.7,33.5,0c11.4,8,20.3,8.3,32.2,0c11.6-8.1,19.2-8.1,30.8,0
-	l-3.8,4.7C146.9,20.2,142.3,20.2,133,26.7z M133,10.8c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0
-	c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,6.1c11.2-7.8,20.6-8.1,32.2,0c11,7.6,19,8.5,31.3,0C75.1-2,85.9-1.6,97,6.1
-	c11.4,8,20.3,8.3,32.2,0C140.8-2,148.4-2,160,6.1l-3.8,4.7C146.9,4.3,142.3,4.3,133,10.8z M32.2,38c11,7.6,19,8.5,31.3,0
-	c11.6-8.1,22.4-7.7,33.5,0c11.4,8,20.3,8.3,32.2,0c11.6-8.1,19.2-8.1,30.8,0l-3.8,4.7c-9.3-6.5-13.9-6.5-23.3,0
-	c-13.9,9.7-25.8,9.7-39.8,0c-9.1-6.3-16.8-6.3-25.9,0c-13.8,9.6-25.1,9.6-38.9,0c-9.2-6.4-15.4-6.4-24.6,0L0,38
-	C11.2,30.2,20.6,29.9,32.2,38z"></path></svg>
-                  </div>
+                
                   <p class="u-text u-text-3">También puedes ver todos sus cursos, quiz entre otras cosas que hacen los estudiantes dentro de la aplicación para así saber si en realidad estan aprendiendo con el contenido didactico de la pagina, así haciendo tu trabajo mejor y mas sencillo.</p>
                 </div>
               </div>
