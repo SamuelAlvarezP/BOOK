@@ -10,9 +10,12 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
+                            @section('css')
+                            <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+                            @endsection
 
                                 <a href="{{ route('usuarios.create')}}" class="btn btn-primary" type="button">Nuevo</a>
-                                 <table class="table table-striped mt-2">
+                                 <table class="table table-striped mt-2" id="docente" class="display">
                                   <thead style="background-color:black">
                                     <th style="display: none;">ID</th>
                                     <th style="color:bisque">Nombre</th>
@@ -45,7 +48,7 @@
                                         @endforeach
                                     </tbody>
                                  </table>
-
+                                         
                                  </div>
 
                         </div>

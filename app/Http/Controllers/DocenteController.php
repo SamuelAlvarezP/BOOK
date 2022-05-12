@@ -4,8 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Docente;
-
-
+use Aws\Api\Validator;
+use Illuminate\Auth\Events\Validated;
+use Illuminate\Contracts\Support\ValidatedData;
+use Illuminate\Validation\ValidationData;
+use Symfony\Contracts\Service\Attribute\Required;
 
 class DocenteController extends Controller
 {
@@ -25,7 +28,7 @@ class DocenteController extends Controller
      */
     public function index()
     {
-       $docente = Docente::paginate(5);
+       $docente = Docente::paginate();
         return view('docente.index')->with('docente',$docente);
     }
 
@@ -47,16 +50,34 @@ class DocenteController extends Controller
      */
     public function store(Request $request)
     {
-        $docente = new Docente();
+        /*$docente = new Docente();
 
-        $docente->id_docente = $request->get('id');
-        $docente->nombre_doc = $request->get('name');
-        $docente->apellidos_doc = $request->get('surname');
-        $docente->edad_doc = $request->get('age');
-        $docente->genero_doc = $request->get('gender');
+        $docente->id_docente = $request->get('id_docente');
+        $docente->nombre_doc = $request->get('nombre_doc');
+        $docente->apellidos_doc = $request->get('apellidos_doc');
+        $docente->edad_doc = $request->get('edad_doc');
+        $docente->genero_doc = $request->get('genero_doc');
+*/
 
+
+        //$docente->save();
+        //return redirect('/docente');
+
+        $this->validate($request,[
+         'id_docente'=>'required|not_regex:[(a-z)]|not_in:0|min:5',
+         'nombre_doc'=> 'required|not_regex:[(0-99999)]|min:2|max:20|not_in:numeric',
+         'apellidos_doc'=> 'required|not_regex:[(0-99999)]|min:5|max:20|',
+         'edad_doc'=> 'required|not_regex:[(a-z)]|not_in:0|',
+         'genero_doc'=> 'required',
+
+
+        ]);
+
+        $input = $request->all();
+
+        $docente = Docente::create($input);
         $docente->save();
-        return redirect('/docente');
+        return redirect()->route('docente.index');
     }
 
     /**
@@ -92,17 +113,34 @@ class DocenteController extends Controller
     public function update(Request $request, $id)
     {
 
-        $docente = Docente::find($id);
+        /*$docente = Docente::find($id);
 
-        $docente->id_docente = $request->get('id');
-        $docente->nombre_doc = $request->get('name');
-        $docente->apellidos_doc = $request->get('surname');
-        $docente->edad_doc = $request->get('age');
-        $docente->genero_doc = $request->get('gender');
+        $docente->id_docente = $request->get('id_docente');
+        $docente->nombre_doc = $request->get('nombre_doc');
+        $docente->apellidos_doc = $request->get('apellidos_doc');
+        $docente->edad_doc = $request->get('edad_doc');
+        $docente->genero_doc = $request->get('genero_doc');
         $docente->rol = $request->get('rol');
 
         $docente->save();
-        return redirect('/docente');
+        return redirect('/docente');*/
+
+        $this->validate($request,[
+            'id_docente' => 'required|numeric|not_in:0|min:5',
+            'nombre_doc'=> 'required|alpha|min:4',
+            'apellidos_doc'=> 'required|alpha|min:4',
+            'edad_doc'=> 'required|numeric|not_in:0|min:1',
+            'genero_doc'=> 'required|alpha',
+        
+
+
+           ]);
+
+           $input = $request->all();
+          $docente = Docente::find($id);
+          $docente->update($input);
+          return redirect()->route('docente.index');
+
     }
 
     /**
@@ -111,10 +149,9 @@ class DocenteController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Docente $id)
+    public function destroy($id)
     {
         Docente::find($id)->delete();
         return redirect()->route('docente.index');
-
     }
 }

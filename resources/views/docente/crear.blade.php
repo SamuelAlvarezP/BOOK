@@ -28,34 +28,34 @@
                               <div class="row">
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <label for="id">ID docente</label>
-                                        {!! Form::text('id',null,array('class'=>'form-control')) !!}
+                                        <label for="id_docente">ID docente</label>
+                                        {!! Form::text('id_docente',null,array('class'=>'form-control')) !!}
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <label for="name">Nombre</label>
-                                        {!! Form::text('name',null,array('class'=>'form-control')) !!}
+                                        <label for="nombre_doc">Nombre</label>
+                                        {!! Form::text('nombre_doc',null,array('class'=>'form-control')) !!}
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <label for="surname">Apellidos</label>
-                                        {!! Form::text('surname',null,array('class'=>'form-control')) !!}
+                                        <label for="apellidos_doc">Apellidos</label>
+                                        {!! Form::text('apellidos_doc',null,array('class'=>'form-control')) !!}
                                     </div>
 
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <label for="age">edad</label>
-                                        {!! Form::text('age',null,array('class'=>'form-control')) !!}
+                                        <label for="edad_doc">edad</label>
+                                        {!! Form::text('edad_doc',null,array('class'=>'form-control')) !!}
                                     </div>
                                 </div>
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
-                                        <label for="gender">Genero</label>
+                                        <label for="genero_doc">Genero</label>
                                         <br>
-                                        <select name="gender" id="gender">
+                                        <select name="genero_doc" id="gender">
                                             <option value="Masculino">Masculino</option>
                                             <option value="Femenino">Femenino</option>
                                         </select>

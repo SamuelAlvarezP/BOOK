@@ -1,38 +1,73 @@
 @extends('layouts.app')
 
 @section('content')
-<h2>EDITAR REGISTROS</h2>
-<form action="{{route('docente.edit',['docente'=>$docente->id])}}" method="POST">
-    @csrf
-    @method('PUT')
-    <div class="mb-3">
-        <label for="" class="form-label">ID del docente</label>
-        <input type="text" id="id" name="id" class="form-control" value="{{$docente->id}}">
-    </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Nombre del docente</label>
-        <input type="text" id="name" class="form-control" name="name" value="{{$docente->name}}">
-    </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Apellido del docente</label>
-        <input type="text" id="surname" class="form-control" name="surname" value="{{$docente->surname}}">
-    </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Edad del docente</label>
-        <input type="text" id="age" class="form-control" name="age" value="{{$docente->age}}">
-    </div>
-    <div class="mb-3">
-        <label for="" class="form-label">Genero del docente</label>
-        <input type="text" id="gender" name="gender" class="form-control" value="{{$docente->gender}}">
-    </div>
-    <a href="/docente" class="btn btn-secondary">Cancelar</a>
-    <button type="submit" class="btn btn-primary">Guardar</button>
-</form>
+ <section class="section">
+     <div class="section-header">
+         <h3 class="page__heading">Editar Docentes</h3>
+     </div>
+     <div class="section-body">
+         <div class="row">
+             <div class="col-lg-11">
+                 <div class="card">
+                     <div class="card-body">
+
+                        @if ($errors->any())
+                        <div class="alert alter-dark aler-dissmis fade show">
+                            <strong>Revise los campos</strong>
+                            @foreach ($errors->all() as $error)
+                            <span badga badge-danger>{{$error}}</span>
+                            @endforeach
+                            <button type="button" class="close" data-dissmis="alert" aria-label="close">
+                                <span aria-hidden="true">$times;</span>
+                            </button>
+                            @endif
+
+                            {!! Form::model($docente,['method'=>'PATCH','route'=>['docente.update',$docente->id]])!!}
+                            <div class="row">
+                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                    <div class="form-group">
+                                        <label for="id_docente">ID del Docente</label>
+                                        {!! Form::text('id_docente',$docente->id_docente,array('class'=>'form-control')) !!}
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                            <div class="form-group">
+                                                <label for="nombre_doc">Nombre del Docente</label>
+                                                {!! Form::text('nombre_doc',$docente->nombre_doc,array('class'=>'form-control')) !!}
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                                    <div class="form-group">
+                                                        <label for="apellidos_doc">Apellido del Docente</label>
+                                                        {!! Form::text('apellidos_doc',$docente->apellidos_doc,array('class'=>'form-control')) !!}
+                                                    </div>
+                                                    <div class="row">
+                                                        <div class="col-xs-12 col-sm-12 col-md-12">
+                                                            <div class="form-group">
+                                                                <label for="edad_doc">Edad del Docente</label>
+                                                                {!! Form::text('edad_doc',$docente->edad_doc,array('class'=>'form-control')) !!}
+                                                            </div>
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                                                    <div class="form-group">
+                                                                        <label for="genero_doc">Genero del Docente</label>
+                                                                        {!! Form::text('genero_doc',$docente->genero_doc,array('class'=>'form-control')) !!}
+                                                                    </div>
+                                                                    <br>
+                                                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                                                        <button type="submit" class="btn btn-success">Guardar</button>
+                                                                    </div>
+
+
                         </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+
+
+                     </div>
+                     {!! Form::close() !!}
+                 </div>
+             </div>
+         </div>
+     </div>
+ </section>
 @endsection
 

@@ -1,5 +1,8 @@
 
 @extends('layouts.app')
+@section('css')
+<link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+@endsection
 
 @section('content')
     <section class="section">
@@ -11,18 +14,22 @@
                 <div class="col-lg-12">
                     <div class="card">
                         <div class="card-body">
+                            @section('css')
+                            <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+                            @endsection
+
 
                                 <a href="{{ route('docente.create')}}" class="btn btn-primary" type="button">Nuevo</a>
-                                 <table class="table table-striped mt-2">
+                                 <table id="Docentes" class="table table-striped mt-2" style="width: :100%">
                                   <thead style="background-color:black">
-                                    <th style="color:bisque">ID</th>
-                                    <th style="color:bisque">ID DOCENTE</th>
-                                    <th style="color:bisque">Nombre Docente</th>
-                                    <th style="color:bisque">Apellido Docente</th>
-                                    <th style="color:bisque">Edad Docente</th>
-                                    <th style="color:bisque">Genero Docente</th>
-                                    <th style="color:bisque">Rol</th>
-                                    <th style="color:bisque">Acciones</th>
+                                    <th scope="col" style="color:bisque">ID</th>
+                                    <th scope="col" style="color:bisque">ID DOCENTE</th>
+                                    <th scope="col" style="color:bisque">Nombre Docente</th>
+                                    <th scope="col" style="color:bisque">Apellido Docente</th>
+                                    <th scope="col" style="color:bisque">Edad Docente</th>
+                                    <th scope="col" style="color:bisque">Genero Docente</th>
+                                    <th scope="col" style="color:bisque">Rol</th>
+                                    <th scope="col" style="color:bisque">Acciones</th>
                                    </thead>
                                     <tbody>
                                         @foreach($docente as $docente)
@@ -47,6 +54,17 @@
                                         @endforeach
                                     </tbody>
                                  </table>
+                                 @section('js')
+
+                                 <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+                                 <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+                                 <script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+                                 <script>
+                                     $(document).ready(function() {
+                                     $('#Docentes').DataTable();
+                                 });
+                                 </script>
+                                 @endsection
 
                                  </div>
 
@@ -56,5 +74,9 @@
             </div>
         </div>
     </section>
+
+
 @endsection
+
+
 

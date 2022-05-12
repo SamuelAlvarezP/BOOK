@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Arr;
 
-
+//muestra la pagina principal del usuario
 class UsuarioController extends Controller
 {
     /**
@@ -47,7 +47,7 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'name' => 'required',
+            'name' => 'required|not_regex:([0-99999])',
             'email'=> 'required|email|unique:users,email',
             'password'=>'required|min:6|same:password',
             'confirm_password' => 'required|min:6|same:password',
@@ -100,7 +100,7 @@ class UsuarioController extends Controller
     public function update(Request $request, $id)
     {
         $this->validate($request,[
-            'name' => 'required',
+            'name' => 'required|string',
             'email'=> 'required|email|unique:users,email,'.$id,
             'password'=>'required|min:6|same:password',
             'confirm_password' => 'required|min:6|same:password',
