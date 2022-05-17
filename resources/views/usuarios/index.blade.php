@@ -1,61 +1,55 @@
-@extends('layouts.app')
+@extends('layouts.plantillabase');
 
-@section('content')
-    <section class="section">
-        <div class="section-header">
-            <h3 class="page__heading">Usuarios</h3>
-        </div>
-        <div class="section-body">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="card">
-                        <div class="card-body">
-                            @section('css')
-                            <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
-                            @endsection
-
-                                <a href="{{ route('usuarios.create')}}" class="btn btn-primary" type="button">Nuevo</a>
-                                 <table class="table table-striped mt-2" id="docente" class="display">
-                                  <thead style="background-color:black">
-                                    <th style="display: none;">ID</th>
-                                    <th style="color:bisque">Nombre</th>
-                                    <th style="color:bisque">Email</th>
-                                    <th style="color:bisque">Rol</th>
-                                    <th style="color:bisque">Acciones</th>
-                                   </thead>
-                                    <tbody>
-                                        @foreach($usuario as $usuario)
-                                           <tr>
-                                               <td style="display:none">{{$usuario->id}}</td>
-                                               <td>{{$usuario->name}}</td>
-                                               <td>{{$usuario->email}}</td>
-                                               <td>@if (!empty($usuario->getRoleNames()))
-                                                @foreach($usuario->getRoleNames() as $rolName)
-                                                 <h5><span class="">{{$rolName}}</span></h5>
-                                                 @endforeach
-                                                @endif
-                                               </td>
-                                               <td>
-                                                   <a href="{{ route('usuarios.edit', $usuario->id)}}" class="btn btn-info">Editar</a>
-
-                                                    {!! Form::open(['method'=>'DELETE','route'=>['usuarios.destroy',$usuario->id],'style'=>'display:inline']) !!}
-
-                                                        {!!  Form::submit('Borrar',['class'=>'btn btn-danger']) !!}
-                                                    {!! Form::close() !!}
-                                               </td>
-
-                                           </tr>
-                                        @endforeach
-                                    </tbody>
-                                 </table>
-                                         
-                                 </div>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+@section('css')
+<link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 @endsection
 
+@livewire('navigation-menu')
+@section('contenido')
+
+<a href="usuarios/create" class="btn btn-primary">Crear</a>
+
+<p>   </p>
+<table id="usuario" class="table table-dark table-striped mt-4" style="width:100%">
+<thead class="bg-primary text-white">
+        <tr>
+            <th scope="col">id usuario</th>
+            <th scope="col">nombre</th>
+            <th scope="col">email</th>
+
+            <th scope="col">Acciones</th>
+
+        </tr>
+    </thead>
+    <tbody>
+    @foreach ($usuario as $usuario)
+            <tr>
+                <td>{{$usuario->id}}</td>
+                <td>{{$usuario->name}}</td>
+                <td>{{$usuario->email}}</td>
+                <td>
+                <form action="{{ route ('usuarios.destroy',$usuario->id)}}" method="POST">
+                    <a href="/usuario/{{$usuario->id}}/edit" class="btn btn-info">Editar</a>
+                     @csrf
+                     @method('DELETE')
+                    <button class="btn btn-danger" type="submit">Eliminar</button>
+                    </form>
+                </td>
+            </tr>
+        @endforeach
+    </tbody>
+</table>
+@section('js')
+
+<script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/1.11.5/js/dataTables.bootstrap5.min.js"></script>
+<script>
+    $(document).ready(function() {
+    $('#usuario').DataTable();
+} );
+</script>
+
+@endsection
+
+@endsection

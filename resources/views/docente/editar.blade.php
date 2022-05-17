@@ -51,7 +51,7 @@
                                                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                                                     <div class="form-group">
                                                                         <label for="genero_doc">Genero del Docente</label>
-                                                                        {!! Form::text('genero_doc',$docente->genero_doc,array('class'=>'form-control')) !!}
+                                                                        {!! Form::text('genero_doc',$docente->genero_doc,array('class'=>'form-control','readonly'=>'readonly')) !!}
                                                                     </div>
                                                                     <br>
                                                                     <div class="col-xs-12 col-sm-12 col-md-12">

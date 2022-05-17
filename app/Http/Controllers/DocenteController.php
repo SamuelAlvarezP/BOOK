@@ -28,7 +28,7 @@ class DocenteController extends Controller
      */
     public function index()
     {
-       $docente = Docente::paginate();
+       $docente = Docente::all();
         return view('docente.index')->with('docente',$docente);
     }
 
@@ -64,11 +64,11 @@ class DocenteController extends Controller
         //return redirect('/docente');
 
         $this->validate($request,[
-         'id_docente'=>'required|not_regex:[(a-z)]|not_in:0|min:5',
-         'nombre_doc'=> 'required|not_regex:[(0-99999)]|min:2|max:20|not_in:numeric',
-         'apellidos_doc'=> 'required|not_regex:[(0-99999)]|min:5|max:20|',
-         'edad_doc'=> 'required|not_regex:[(a-z)]|not_in:0|',
-         'genero_doc'=> 'required',
+            'id_docente' => 'required|numeric|not_in:0|min:5|filled',
+            'nombre_doc'=> 'required|string|min:4|filled|',
+            'apellidos_doc'=> 'required|string|min:4|filled',
+            'edad_doc'=> 'required|numeric|not_in:0|min:1|filled',
+            'genero_doc'=> 'required|alpha',
 
 
         ]);
@@ -131,7 +131,7 @@ class DocenteController extends Controller
             'apellidos_doc'=> 'required|alpha|min:4',
             'edad_doc'=> 'required|numeric|not_in:0|min:1',
             'genero_doc'=> 'required|alpha',
-        
+
 
 
            ]);

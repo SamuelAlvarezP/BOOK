@@ -14,7 +14,7 @@ class EstudianteController extends Controller
      */
     public function index()
     {
-              $estudiante = Estudiante::paginate(5);
+              $estudiante = Estudiante::paginate();
               return view('estudiante.index')->with('estudiante',$estudiante);
     }
 
@@ -36,16 +36,18 @@ class EstudianteController extends Controller
      */
     public function store(Request $request)
     {
-        $estudiante = new Estudiante();
+       $this->validate($request,[
+        'id_estudiante' => 'required|numeric|not_in:0|min:5',
+            'nombre_estu'=> 'required|alpha|min:4',
+            'apellidos_estu'=> 'required|alpha|min:4',
+            'edad_estu'=> 'required|numeric|not_in:0|min:1',
+            'genero_estu'=> 'required|alpha',
+       ]);
+       $input = $request->all();
 
-        $estudiante->id_estudiante = $request->get('id');
-        $estudiante->nombre_estu = $request->get('name');
-        $estudiante->apellidos_estu = $request->get('surname');
-        $estudiante->edad_estu = $request->get('age');
-        $estudiante->genero_estu = $request->get('gender');
-
-        $estudiante->save();
-        return redirect('/estudiante');
+       $estudiante = Estudiante::create($input);
+       $estudiante->save();
+       return redirect()->route('estudiante.index');
 
     }
 
@@ -69,7 +71,7 @@ class EstudianteController extends Controller
     public function edit($id)
     {
         $estudiante = Estudiante::find($id);
-        return view('docente.editar')->with('docente',$estudiante);
+        return view('estudiante.editar')->with('estudiante',$estudiante);
     }
 
     /**
@@ -81,16 +83,22 @@ class EstudianteController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $estudiante = new Estudiante();
+        $this->validate($request,[
+            'id_estudiante' => 'required|numeric|not_in:0|min:5',
+            'nombre_estu'=> 'required|string|min:4|',
+            'apellidos_estu'=> 'required|min:4|string',
+            'edad_estu'=> 'required|numeric|not_in:0|min:1',
+            'genero_estu'=> 'required|alpha',
 
-        $estudiante->id_estudiante = $request->get('id');
-        $estudiante->nombre_estu = $request->get('name');
-        $estudiante->apellido_estu = $request->get('surname');
-        $estudiante->edad_estu = $request->get('age');
-        $estudiante->genero_estu = $request->get('gender');
 
-        $estudiante->save();
-        return redirect('/estudiante');
+
+           ]);
+
+           $input = $request->all();
+          $estudiante = Estudiante::find($id);
+          $estudiante->update($input);
+          return redirect()->route('estudiante.index');
+
     }
 
     /**

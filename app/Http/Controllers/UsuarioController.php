@@ -47,7 +47,7 @@ class UsuarioController extends Controller
     public function store(Request $request)
     {
         $this->validate($request,[
-            'name' => 'required|not_regex:([0-99999])',
+            'name' => 'required|alpha',
             'email'=> 'required|email|unique:users,email',
             'password'=>'required|min:6|same:password',
             'confirm_password' => 'required|min:6|same:password',
@@ -130,7 +130,9 @@ class UsuarioController extends Controller
      */
     public function destroy($id)
     {
+
         User::find($id)->delete();
         return redirect()->route('usuarios.index');
-    }
+
+}
 }

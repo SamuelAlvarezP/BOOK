@@ -64,7 +64,7 @@
                                 <div class="col-xs-12 col-sm-12 col-md-12">
                                     <div class="form-group">
                                         <label for="">Rol</label>
-                                        {!! Form::text('rol','Docente', array('class'=>'form-control')) !!}
+                                        {!! Form::text('rol','Docente', array('class'=>'form-control','readonly'=>'readonly')) !!}
                                     </div>
                                 </div>
                               </div>
