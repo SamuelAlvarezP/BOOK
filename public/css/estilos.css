@@ -1,0 +1,193 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    font-size: 500xp;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-attachment: fixed;
+    width: 1800px;
+    height: 800px;
+    max-height: 1000px;
+    max-width: 2000px;
+    background-color: transparent;
+    background-image: url(../img/fregistro.jpg);
+}
+* {
+    box-sizing: border-box;
+}
+.contenedor{
+    width: 100%;
+    position: relative;
+    top: 20px;
+    left: 10px;
+    padding: 65px;
+
+}
+.formulario{
+    background: #F6F6F6;
+    margin-top: 100px;
+    padding: 3px;
+
+
+}
+h1{
+    text-align: center;
+    color: #000000;
+    font-size: 30px;
+
+}
+
+input[type="text"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+input[type="password"]{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+select{
+    font-size: 20px;
+    width: 82%;
+    padding: 10px;
+    border: none;
+}
+
+.input-contenedor{
+
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+     border-radius: 10px ;
+
+}
+
+.input-genero i, input[type="Radio"]{
+
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border: 1px solid #aaa;
+}
+.input-genero {
+    display: flex;
+}
+
+.input-temas{
+    display: flex;
+    justify-content: space-between;
+
+}
+input[type="Checkbox"]{
+    margin-top: 20px;
+}
+p{
+   font-family: Arial, Helvetica, sans-serif;
+   color: #505050;
+}
+div select option{
+    font-family: Arial, Helvetica, sans-serif;
+   color: #505050;
+}
+
+#hombre{
+    margin-left: 30px;
+}
+
+#mujer {
+    margin-left: 80px ;
+}
+
+.input-genero i {
+    border: none;
+}
+
+textarea {
+    resize: none;
+    width: 462px;
+}
+label{
+    font-family: Arial, Helvetica, sans-serif;
+   color: #505050;
+}
+.icon{
+    min-width: 55px;
+    text-align: center;
+    color: #000000;
+}
+select{
+    height: 50px;
+    width: 462px;
+}
+
+.button{
+    border: none;
+    width: 100%;
+    color: white;
+    font-size: 20px;
+    background:  #000000;
+    padding: 15px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+
+
+}
+.button:hover{
+    background: cadetblue;
+}
+
+.link{
+    text-decoration: none;
+      color: #000000;
+    font-weight: 600;
+}
+.link:hover{
+     color: cadetblue;
+}
+@media(min-width:768px)
+{
+    .formulario{
+        margin: auto;
+        width: 500px;
+        margin-top: 10px;
+        border-radius: 2%;
+
+    }
+}
+.titulo{
+    position: relative;
+    top:95px;
+
+}
+.subtitulo{
+    position: relative;
+    left:37%;
+    top: 3.2em;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

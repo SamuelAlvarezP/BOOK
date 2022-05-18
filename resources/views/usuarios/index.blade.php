@@ -16,7 +16,6 @@
             <th scope="col">id usuario</th>
             <th scope="col">nombre</th>
             <th scope="col">email</th>
-
             <th scope="col">Acciones</th>
 
         </tr>
@@ -27,12 +26,14 @@
                 <td>{{$usuario->id}}</td>
                 <td>{{$usuario->name}}</td>
                 <td>{{$usuario->email}}</td>
+
                 <td>
                 <form action="{{ route ('usuarios.destroy',$usuario->id)}}" method="POST">
-                    <a href="/usuario/{{$usuario->id}}/edit" class="btn btn-info">Editar</a>
+                    <a href="/usuarios/{{$usuario->id}}/edit" class="btn btn-info">Editar</a>
                      @csrf
                      @method('DELETE')
-                    <button class="btn btn-danger" type="submit">Eliminar</button>
+                    <button class="btn btn-danger" type="submit" onclick="
+                    return confirm('Are you sure that you want to delete this item?')">Eliminar</button>
                     </form>
                 </td>
             </tr>

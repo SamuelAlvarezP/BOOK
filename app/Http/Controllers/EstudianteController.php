@@ -38,8 +38,8 @@ class EstudianteController extends Controller
     {
        $this->validate($request,[
         'id_estudiante' => 'required|numeric|not_in:0|min:5',
-            'nombre_estu'=> 'required|alpha|min:4',
-            'apellidos_estu'=> 'required|alpha|min:4',
+            'nombre_estu'=> 'required|string|min:4',
+            'apellidos_estu'=> 'required|string|min:4',
             'edad_estu'=> 'required|numeric|not_in:0|min:1',
             'genero_estu'=> 'required|alpha',
        ]);
