@@ -4,11 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Docente;
-use Aws\Api\Validator;
-use Illuminate\Auth\Events\Validated;
-use Illuminate\Contracts\Support\ValidatedData;
-use Illuminate\Validation\ValidationData;
-use Symfony\Contracts\Service\Attribute\Required;
+
 
 class DocenteController extends Controller
 {

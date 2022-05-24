@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\CursosController;
 use Illuminate\Support\Facades\Route;
 
 //agregamos los controladores
@@ -31,11 +32,13 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
+
 Route::group(['middleware' => ['auth']],function(){
  Route::resource('roles',RolController::class);
  Route::resource('usuarios',UsuarioController::class);
  Route::resource('estudiante',EstudianteController::class);
  Route::resource('docente',DocenteController::class);
+ Route::resource('cursos',CursosController::class);
 });
 
 Route::get('/docente.editar', function(){
@@ -45,6 +48,9 @@ Route::get('/docente.editar', function(){
 Route::get('/estudiante.editar', function(){
     return view('estudiante');
 })->name('estudiante');
+
+
+
 
 
 
