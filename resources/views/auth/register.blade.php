@@ -1,10 +1,29 @@
-<x-guest-layout>
-    <x-jet-authentication-card>
-        <x-slot name="logo">
-            <x-jet-authentication-card-logo />
-        </x-slot>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-        <x-jet-validation-errors class="mb-3" />
+    @yield('css')
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
+    <link rel="stylesheet" type="text/css" href="css/estilos.css">
+    
+    <!--LOGO-->
+    <link rel="icon" type="image/x-icon" href="{{asset('images/logo_blanco.png')}}" />
+
+<!--TÍTULO PÁGINA-->
+<title>REGISTRO</title>
+</head>
+<body>
+
+<!--VALIDACIONES-->
+
+    <x-jet-authentication-card>
+        <x-slot name="logo">            
+        </x-slot>
+        <x-jet-validation-errors class="mb-3"/>
 
         <!--RUTA REGISTRAR -->
         <div class="card-body">
@@ -15,7 +34,7 @@
                 <div class="mb-3">
                     <x-jet-label value="{{ __('Nombre') }}" />
                     <!--VALIDACIONES-->
-                    <x-jet-input class="{{ $errors->has('name') ? 'is-invalid' : '' }}" type="text" name="name"
+                    <x-jet-input class="{{ $errors->has('name') ? 'is-invalid' : '' }}" type="email" name="name"
                                  :value="old('name')" required autofocus autocomplete="name" />
                     <x-jet-input-error for="name"></x-jet-input-error>
                 </div>
@@ -76,4 +95,5 @@
             </form>
         </div>
     </x-jet-authentication-card>
-</x-guest-layout>
+</body>
+</html>

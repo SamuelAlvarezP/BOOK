@@ -957,7 +957,7 @@ nav.main-menu {
      background: #ffffff;
 }
 .main-menu ul>li .sub-down li a {
-     color: #114c7d;
+     color: #4e96d2;
      font-size: 15px;
      text-transform: capitalize;
      font-weight: 300;
@@ -1077,7 +1077,7 @@ nav.main-menu {
 
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 .head {
-     background: #023041;
+     background: #287d9c;
      height: 50px;
 }
 ul.email_call {
@@ -1221,7 +1221,7 @@ ul.social_icon li a:hover {
      padding: 0px 30px 30px 30px;
 }
 .yellow {
-     background: #fbe212 !important;
+     background: #F8C636 !important;
 }
 .padd_ri {
      padding-right: 0;
@@ -1329,7 +1329,7 @@ ul.social_icon li a:hover {
      margin-bottom: 20px;
 }
 .ourwork {
-     background: #023041;
+     background: #287d9c;
      padding: 90px 0 70px 0;
      background-repeat: no-repeat;
      background-size: cover;
@@ -1438,13 +1438,14 @@ ul.social_icon li a:hover {
      width: 100%;
 }
 
+
 /** end Better **/
 
 /** review section **/
 .review {
      padding-top: 90px;
      padding-bottom: 90px;
-     background: url(../images/banner.jpg);
+     background: #1881a8;
      background-repeat: no-repeat;
 }
 .review .titlepage {

@@ -14,25 +14,33 @@
                 <x-jet-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                     {{ __('Inicio') }}
                 </x-jet-nav-link>
+                @can('administrador')
                <ul class="navbar-nav me-auto">
                 <x-jet-nav-link href="{{ route('roles.index') }}" :active="request()->routeIs('roles')">
                     {{ __('Roles') }}
                 </x-jet-nav-link>
+                @endcan
                </ul>
                <ul class="navbar-nav me-auto">
+                   @can('administrador')
                 <x-jet-nav-link href="{{ route('docente.index') }}" :active="request()->routeIs('docente')">
                     {{ __('Docentes') }}
                 </x-jet-nav-link>
+                @endcan
                </ul>
                <ul class="navbar-nav me-auto">
+                   @can('administrador')
                 <x-jet-nav-link href="{{ route('estudiante.index') }}" :active="request()->routeIs('estudiante')">
                     {{ __('Estudiantes') }}
                 </x-jet-nav-link>
+                @endcan
                </ul>
                <ul class="navbar-nav me-auto">
+                   @can('administrador')
                 <x-jet-nav-link href="{{ route('usuarios.index') }}" :active="request()->routeIs('usuarios')">
                     {{ __('Usuarios') }}
                 </x-jet-nav-link>
+                @endcan
                </ul>
                <ul class="navbar-nav me-auto">
                    <x-jet-nav-link href="{{ route('cursos.index')}}" :active="request()->routeIs('cursos')">

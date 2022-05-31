@@ -61,7 +61,7 @@
                      </ul>
                   </div>
 
-                   <!-- LINK REDES SOCIALES BOOK -->
+                   <!-- MENÚ -->
                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-9">
                     <div class="menu-area">
                        <div class="limit-box">
@@ -97,12 +97,10 @@
                            </div>
                         </div>
                      </div>
-                      <!-- BARRA DE MENÚ -->
 
                   </div>
                </div>
             </div>
-            <!-- FIN BARRA DE MENÚ-->
             <!-- END HEADER -->
 
             <!-- CARRUSEL -->
@@ -124,11 +122,11 @@
                                  <div class="col-md-7">
                                     <div class="text-bg">
                                        <span>BIENVENIDOS A BOOK</span>
-
                                        <p> En BOOK estamos generando métodos para facilitar el aprendizaje de los estudiantes, mejorando su rendimiento escolar para que tengan una mejor experiencia educativa en sus próximos años, nuestro contenido es accesible para todas las edades y se adaptará a su nivel de aprendizaje, podrán progresar en la formación de palabras, ampliar su vocabulario e iniciarse en su capacidad de aprende a leer y escribir. ¡Comienza ahora!</p>
+                                       <!--BOTÓN INICAR SESIÓN -->
                                        <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
-                                       <a href="{{route('register')}}" class="btn btn-primary">Registrarse</a>
-
+                                       <!--BOTÓN REGISTRARSE -->
+                                       <div class=""><a href="{{route('register')}}">Registrarse</a></div>
                                     </div>
                                  </div>
                               </div>
@@ -145,7 +143,11 @@
                                     <div class="text-bg">
                                        <span>CONTRIBUIMOS CON EL FUTURO</span>
                                        <p> En BOOK estamos contribuyendo con el futuro de los estudiantes, proporcionándole herramientas para que  obtengan un excelente desempeño en los retos que se le presenten y así se sientan seguros de afrontarlo.</p>
+                                       <!--BOTÓN INICAR SESIÓN -->
                                        <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
+                                       <!--BOTÓN REGISTRARSE -->
+                                       <div class=""><a href="{{route('register')}}">Registrarse</a></div>
+
                                     </div>
                                  </div>
                               </div>
@@ -162,7 +164,10 @@
                                     <div class="text-bg">
                                        <span>EN BOOK TE OFRECEMOS</span>
                                        <p>En BOOK te ofrecemos múltiples opciones para los estudiantes: memorización visual y auditiva, mejora de la comprensión, discriminación de vocales y consonantes, escribir el trazo de las letras del alfabeto y ampliar el vocabulario con animaciones de objetos, animales ,etc.  </p>
+                                       <!--BOTÓN INICAR SESIÓN -->
                                        <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
+                                       <!--BOTÓN REGISTRARSE -->
+                                       <div class=""><a href="{{route('register')}}">Registrarse</a></div>
                                     </div>
                                  </div>
                               </div>
@@ -179,8 +184,10 @@
                                     <div class="text-bg">
                                        <span>APRENDIZAJE FÁCIL Y RÁPIDO</span>
                                        <p> Aprende a leer y escribir de una forma didáctica y sencilla, si deseas puedes reforzar lo que ya sabes para tener mejor desempeño en tus estudios, Incorporamos actividades de reconocimiento auditivo para esta etapa de su aprendizaje. ¡Inicia ahora!</p>
+                                       <!--BOTÓN INICAR SESIÓN -->
                                        <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
-
+                                       <!--BOTÓN REGISTRARSE -->
+                                       <div class=""><a href="{{route('register')}}">Registrarse</a></div>
                                  </div>
                                  </div>
                               </div>
@@ -213,7 +220,10 @@
                      <h3>ESCRITURA</h3>
                      <p> En nuestro aplicativo web puedes aprender a escribir con nuestros cursos de escritura básica de una forma sencilla, didáctica y adaptable según tu forma de aprender. </p>
                      <br>
+                     <!--BOTÓN INICAR SESIÓN -->
                      <a href="{{route('login')}}"><Button type="button" class="btn btn-warning">Inicia sesión</Button></a>
+                     <!--BOTÓN REGISTRARSE -->
+                     <a href="{{route('register')}}"><Button type="button" class="btn btn-warning">Registrarse</Button></a>
                   </div>
                </div>
 
@@ -224,7 +234,10 @@
                      <h3>LECTURA</h3>
                      <p>En nuestro aplicativo web puedes aprender a leer con nuestros cursos de lectura básica de una forma sencilla y de la manera que más te gusta aprender.</p>
                      <br>
+                     <!--BOTÓN INICAR SESIÓN -->
                      <a href="{{route('login')}}"><Button type="button" class="btn btn-warning">Inicia sesión</Button></a>
+                     <!--BOTÓN REGISTRARSE -->
+                     <a href="{{route('register')}}"><Button type="button" class="btn btn-warning">Registrarse</Button></a>
                   </div>
                </div>
 
@@ -235,7 +248,10 @@
                      <h3>MULTIMEDIA</h3>
                      <p>En nuestro aplicativo web puedes repasar y aprender con el contenido audiovisual que esta actualizado para aprender cosas nuevas. </p>
                      <br>
+                     <!--BOTÓN INICAR SESIÓN -->
                      <a href="{{route('login')}}"><Button type="button" class="btn btn-warning">Inicia sesión</Button></a>
+                     <!--BOTÓN REGISTRARSE-->
+                     <a href="{{route('register')}}"><Button type="button" class="btn btn-warning">Registrarse</Button></a>
                   </div>
                </div>
             </div>
@@ -347,11 +363,13 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  <div class="Better_clean">
+                  
                      <figure><img src="{{asset('images/juego_3.jpeg')}}" width="900px" height="800px"/></figure>
                      <br>
+                     <!--BOTÓN INICAR SESIÓN -->
                      <center><a href="{{route('login')}}"><Button type="button" class="btn btn-primary">Inicia sesión</Button></a>
-                     </center>
+                     <!--BOTÓN REGISTRARSE-->
+                     <a href="{{route('register')}}"><Button type="button" class="btn btn-primary">Registrarse</Button></a></center>
                   </div>
                </div>
             </div>
@@ -380,7 +398,8 @@
                                  <img src="{{asset('images/juego_1.jpeg')}}" alt="#"/>
                                  <span>¿EN DONDE ESTÁN LAS LETRAS?</span>
                                  <p>En este juego educativo el estudiante debe encontrar la letra coincidente entre las dos fichas lo más rápido posible. Este juego permite afianzar el reconocimiento visual de las vocales y las consonantes.</p>
-                                 <center><a href="{{route('login')}}"><Button type="button" class="btn btn-outline-dark">Inicia sesión</Button></a></center>
+                                 
+                               
                               </div>
                            </div>
                         </div>
@@ -392,46 +411,25 @@
                                  <i><img src="{{asset('images/juego_2.jpeg')}}" alt="#"/></i>
                                  <span>ESCRIBE LA LETRA</span>
                                  <p>En este juego educativo el estudiante debe escribir el trazado de cada letra y tendrá la posibilidad de realizar el trazado de cada letra del abecedario en mayúscula o en minúscula.</p>
-                                 <center><a href="{{route('login')}}"><Button type="button" class="btn btn-outline-dark">Inicia sesión</Button></a></center>
+                                 
                               </div>
                            </div>
                         </div>
 
-                     <!--JUEGO 4: JUEGO DE PALABRAS-->
-                     <div class="carousel-item">
-                        <div class="container">
-                           <div class="carousel-caption">
-                              <i><img src="{{asset('images/juego_4.jpeg')}}" alt="#"/></i>
-                              <span>JUEGO DE PALABRAS</span>
-                              <p>En este juego educativo el estudiante debe seleccionar una palabra e identificar a que imagén pertenece.</p>
-                              <center><a href="{{route('login')}}"><Button type="button" class="btn btn-outline-dark">Inicia sesión</Button></a></center>
-                           </div>
-                        </div>
-                     </div>
 
-                     <!--JUEGO 5: ESCRIBE LA PALABRA-->
+                     <!--JUEGO 4: ESCRIBE LA PALABRA-->
                      <div class="carousel-item">
                         <div class="container">
                            <div class="carousel-caption">
                               <i><img src="{{asset('images/juego_5.jpeg')}}" alt="#"/></i>
                               <span>ESCRIBE LA PALABRA</span>
                               <p>En este juego educativo el estudiante aprenderá a escribir su nombre en diversos tipos de letra.</p>
-                              <center><a href="{{route('login')}}"><Button type="button" class="btn btn-outline-dark">Inicia sesión</Button></a></center>
+                              
                            </div>
                         </div>
                      </div>
 
-                     <!--JUEGO 6: JUEGO DE IMÁGENES-->
-                     <div class="carousel-item">
-                        <div class="container">
-                           <div class="carousel-caption">
-                              <i><img src="{{asset('images/juego_7.jpeg')}}" alt="#"/></i>
-                              <span>JUEGO DE IMÁGENES</span>
-                              <p>En este juego educativo el estudiante debe identificar a que imagen pertenece cada palabra.</p>
-                              <center><a href="{{route('login')}}"><Button type="button" class="btn btn-outline-dark">Inicia sesión</Button></a></center>
-                           </div>
-                        </div>
-                     </div>
+                  
                   </div>
                <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev"> <i class='fa fa-angle-left'></i></a>
                <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next"> <i class='fa fa-angle-right'></i></a>
