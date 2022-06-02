@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 05-05-2022 a las 18:17:17
+-- Tiempo de generación: 02-06-2022 a las 17:27:07
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -24,6 +24,21 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Estructura de tabla para la tabla `cursos`
+--
+
+CREATE TABLE `cursos` (
+  `id` int(11) NOT NULL,
+  `id_curso` int(25) DEFAULT NULL,
+  `nombre_curso` varchar(55) DEFAULT NULL,
+  `descripcion_curso` varchar(255) DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
+  `created_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Estructura de tabla para la tabla `docentes`
 --
 
@@ -34,7 +49,8 @@ CREATE TABLE `docentes` (
   `apellidos_doc` varchar(30) NOT NULL,
   `edad_doc` int(2) NOT NULL,
   `genero_doc` varchar(15) NOT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL,
+  `rol` varchar(30) DEFAULT NULL,
+  `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -42,10 +58,14 @@ CREATE TABLE `docentes` (
 -- Volcado de datos para la tabla `docentes`
 --
 
-INSERT INTO `docentes` (`id`, `id_docente`, `nombre_doc`, `apellidos_doc`, `edad_doc`, `genero_doc`, `updated_at`, `created_at`) VALUES
-(1, 10010, 'Camilo', 'Arevalo Rojas', 35, 'Masculino', '2022-05-05 19:58:45', '2022-05-05 19:58:45'),
-(2, 1005465787, 'Andres', 'Arias', 99, 'Masculino', '2022-05-05 20:20:34', '2022-05-05 20:20:34'),
-(3, 3136513, 'Yeimmy Tatiana', 'Suarez Quintero', 16, 'Femenino', '2022-05-05 20:22:52', '2022-05-05 20:22:52');
+INSERT INTO `docentes` (`id`, `id_docente`, `nombre_doc`, `apellidos_doc`, `edad_doc`, `genero_doc`, `rol`, `updated_at`, `created_at`) VALUES
+(3, 3136513, 'Yeimmy Tatiana', 'Suarez Quintero', 16, 'Femenino', NULL, '2022-05-05 20:22:52', '2022-05-05 20:22:52'),
+(4, 265432158, 'Alejandro', 'Quintero', 100, 'Masculino', NULL, '2022-05-10 16:11:10', '2022-05-10 16:11:10'),
+(5, 5135486, 'mateo', 'florez', 60, 'Masculino', NULL, '2022-05-10 16:11:51', '2022-05-10 16:11:51'),
+(6, 6846987, 'juliana', 'lopez', 40, 'Masculino', NULL, '2022-05-10 16:12:13', '2022-05-10 16:12:13'),
+(9, 54568, 'jose', 'loir', 70, 'Masculino', NULL, '2022-05-12 16:48:07', '2022-05-12 16:48:07'),
+(16, 354698, 'Jose', 'florez', 36, 'Masculino', NULL, '2022-05-12 20:12:18', '2022-05-12 20:11:25'),
+(21, 12345, 'jose', 'florez', 32, 'Masculino', NULL, '2022-05-13 20:55:50', '2022-05-12 20:18:29');
 
 -- --------------------------------------------------------
 
@@ -86,7 +106,9 @@ CREATE TABLE `estudiantes` (
 --
 
 INSERT INTO `estudiantes` (`id`, `id_estudiante`, `nombre_estu`, `apellidos_estu`, `edad_estu`, `genero_estu`, `updated_at`, `created_at`) VALUES
-(1, 1000644394, 'Samuel', 'Alvarez Pasos', 6, 'Masculino', '2022-05-05 21:04:53', '2022-05-05 21:04:53');
+(1, 1000644394, 'Samuel', 'Alvarez Pasos', 8, 'Masculino', '2022-05-13 21:22:41', '2022-05-05 21:04:53'),
+(2, 1002457, 'andres', 'lopesz', 10, 'Masculino', '2022-05-13 21:06:58', '2022-05-13 21:06:58'),
+(3, 100245744, 'Jose Luis', 'Perez Zapata', 12, 'Masculino', '2022-05-17 19:08:08', '2022-05-17 18:38:33');
 
 -- --------------------------------------------------------
 
@@ -160,7 +182,8 @@ CREATE TABLE `model_has_roles` (
 
 INSERT INTO `model_has_roles` (`role_id`, `model_type`, `model_id`) VALUES
 (3, 'App\\Models\\User', 3),
-(3, 'App\\Models\\User', 4);
+(3, 'App\\Models\\User', 18),
+(5, 'App\\Models\\User', 19);
 
 -- --------------------------------------------------------
 
@@ -251,7 +274,7 @@ CREATE TABLE `roles` (
 
 INSERT INTO `roles` (`id`, `name`, `guard_name`, `created_at`, `updated_at`) VALUES
 (3, 'Docente', 'web', '2022-05-05 16:21:07', '2022-05-05 16:21:07'),
-(4, 'Acudiente', 'web', '2022-05-05 21:09:08', '2022-05-05 21:09:08');
+(5, 'Estudiante', 'web', '2022-05-06 16:19:50', '2022-05-06 16:19:50');
 
 -- --------------------------------------------------------
 
@@ -270,8 +293,8 @@ CREATE TABLE `role_has_permissions` (
 
 INSERT INTO `role_has_permissions` (`permission_id`, `role_id`) VALUES
 (5, 3),
-(9, 3),
-(12, 4);
+(5, 5),
+(9, 3);
 
 -- --------------------------------------------------------
 
@@ -293,8 +316,9 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('HySrYA3ugpiqxDMpVW8aBbGYWGXblwtGAtuoiHcX', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.54 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiVWRDdlMxeWVkWmI4cU8yZWJZUWFTZVlBZTFUS25JSXk5aVRsNHAzeSI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1651767365),
-('P3cOhwCUgj1tAA3O5Kh92oxmrSKSakFuJgMKOJcV', 1, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36', 'YTo4OntzOjY6Il90b2tlbiI7czo0MDoibXpLeGo3Tm1IVU5CTmZFamhVSWxDSEZFbDBFdTM4VkltTExoc1hLTiI7czozOiJ1cmwiO2E6MDp7fXM6OToiX3ByZXZpb3VzIjthOjE6e3M6MzoidXJsIjtzOjM2OiJodHRwOi8vMTI3LjAuMC4xOjgwMDAvZG9jZW50ZS8xL2VkaXQiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjUwOiJsb2dpbl93ZWJfNTliYTM2YWRkYzJiMmY5NDAxNTgwZjAxNGM3ZjU4ZWE0ZTMwOTg5ZCI7aToxO3M6NDoiYXV0aCI7YToxOntzOjIxOiJwYXNzd29yZF9jb25maXJtZWRfYXQiO2k6MTY1MTc1MDU1Nzt9czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCQ5cnhwOWpXNjJIZHBza1dLYVNwNThPcE55U1dkbnE0Rnk1aVp1ZTNrVGVtc1A3aU12TzRwbSI7czoyMToicGFzc3dvcmRfaGFzaF9zYW5jdHVtIjtzOjYwOiIkMnkkMTAkOXJ4cDlqVzYySGRwc2tXS2FTcDU4T3BOeVNXZG5xNEZ5NWladWUza1RlbXNQN2lNdk80cG0iO30=', 1651762796);
+('c2fmIyezhBqHiUE0OEa81Ic9fr3l4EKAKbxPaGYs', 10, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiMlU2UDNVVVRsOW9xNHF5QlIwUzUybnRyelR1akV6UEFibktXaGtCUyI7czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTA7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRWTC5QMkouZkpqNGM0VWlEdG5JMHdlbUIudjlkNHZyZ1ZtalVyQUxKOE94QVdLdHZJbDlkdSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jdXJzb3MiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRWTC5QMkouZkpqNGM0VWlEdG5JMHdlbUIudjlkNHZyZ1ZtalVyQUxKOE94QVdLdHZJbDlkdSI7fQ==', 1653397189),
+('eeVgDR6aWrYrEadQXxjTgM2giEWzDJhdjb7OSamc', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiYVQ1bXhaQ2dQWWlqZkQwRUlHdjFlTllqY3FWYTJkOXVLd0VBSXVIYyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1653999533),
+('nv461roLxzq8lbWyBBtQNmBbRRfuuSA2VI7ZekZF', 10, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiMWM1ZVRSWkN4VWFQWkNnREtVNFRWNEdLbHRRUkx1OWIxRHN5NUJ0TyI7czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTA7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRWTC5QMkouZkpqNGM0VWlEdG5JMHdlbUIudjlkNHZyZ1ZtalVyQUxKOE94QVdLdHZJbDlkdSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jdXJzb3MiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRWTC5QMkouZkpqNGM0VWlEdG5JMHdlbUIudjlkNHZyZ1ZtalVyQUxKOE94QVdLdHZJbDlkdSI7fQ==', 1653406179);
 
 -- --------------------------------------------------------
 
@@ -322,14 +346,20 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
-(1, 'Samuel Alvarez Pasos', 'boxmastr5@gmail.com', NULL, '$2y$10$9rxp9jW62HdpskWKaSp58OpNySWdnq4Fy5iZue3kTemsP7iMvO4pm', NULL, NULL, NULL, NULL, NULL, '2022-05-05 16:19:44', '2022-05-05 16:19:44'),
 (3, 'Andres', 'jave@gmail.com', NULL, '$2y$10$V4XZWkxbXhghjKHVZMU6ze9dniiWEpY7pkipVvI.Vgu0qeNL90uO6', NULL, NULL, NULL, NULL, NULL, '2022-05-05 19:11:13', '2022-05-05 19:11:13'),
-(4, 'Camilo', 'a@gmail.com', NULL, '$2y$10$F.oTybPecRK3TV69gqD7r.E/9brZ6bNc9SJbsvSt7nNCxYnQq46me', NULL, NULL, NULL, NULL, NULL, '2022-05-05 19:14:07', '2022-05-05 19:14:07'),
-(5, 'yeimmy', 'Ytsuarez28@misena.edu.co', NULL, '$2y$10$481Z8E1UxMkJm/FiScA.XuyH6uFb4djEt8HzU4wg4j3QTlIZ7DT42', NULL, NULL, NULL, NULL, NULL, '2022-05-05 21:13:56', '2022-05-05 21:13:56');
+(10, 'Samuel', 'boxmastr5@gmail.com', NULL, '$2y$10$VL.P2J.fJj4c4UiDtnI0wemB.v9d4vrgVmjUrALJ8OxAWKtvIl9du', NULL, NULL, 'fHcHZHWV6RzgYycWoJUD95fun6B6XkUTs6d7RPrq6MBpY4iynwSw6HSZjTyV', NULL, NULL, '2022-05-10 16:50:45', '2022-05-10 16:50:45'),
+(18, 'Camilo', 'a@gmail.com', NULL, '$2y$10$M7IjMVPfB7yerVgEDnkAOOmthRAfMoZ7wD5IGLIFJFk0/Hnt.G0/u', NULL, NULL, NULL, NULL, NULL, '2022-05-13 21:34:41', '2022-05-13 21:34:41'),
+(19, 'Camilo', 'mevaleynomegusta@gmail.com', NULL, '$2y$10$Z9gkvoFN7q4bHUeNyKG4hekwLKrEU6Cm64p.cdh/oANG7a2Hyh1xu', NULL, NULL, NULL, NULL, NULL, '2022-05-17 19:14:28', '2022-05-17 19:14:28');
 
 --
 -- Índices para tablas volcadas
 --
+
+--
+-- Indices de la tabla `cursos`
+--
+ALTER TABLE `cursos`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Indices de la tabla `docentes`
@@ -434,7 +464,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT de la tabla `docentes`
 --
 ALTER TABLE `docentes`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT de la tabla `estudiante`
@@ -446,7 +476,7 @@ ALTER TABLE `estudiante`
 -- AUTO_INCREMENT de la tabla `estudiantes`
 --
 ALTER TABLE `estudiantes`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `failed_jobs`
@@ -476,13 +506,13 @@ ALTER TABLE `personal_access_tokens`
 -- AUTO_INCREMENT de la tabla `roles`
 --
 ALTER TABLE `roles`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Restricciones para tablas volcadas
