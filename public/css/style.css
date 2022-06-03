@@ -35,7 +35,7 @@ html {
 }
 
 body {
-     color: #666666;
+     color: #c03535;
      font-size: 14px;
      font-family: 'poppins', sans-serif;
      line-height: 1.80857;
@@ -43,7 +43,7 @@ body {
 }
 
 a {
-     color: #1f1f1f;
+     color: #b39493;
      text-decoration: none !important;
      outline: none !important;
      -webkit-transition: all .3s ease-in-out;
@@ -65,7 +65,7 @@ h6 {
      padding: 0 0 10px 0;
      font-weight: normal;
      line-height: normal;
-     color: #111111;
+     color: #ffe7e7;
      margin: 0
 }
 
@@ -107,7 +107,7 @@ h3 a,
 h4 a,
 h5 a,
 h6 a {
-     color: #212121;
+     color: #fcf6f6;
      text-decoration: none!important;
      opacity: 1
 }
@@ -250,7 +250,7 @@ button {
      font-weight: 400;
      position: relative;
      letter-spacing: -0.5px;
-     color: #114c7d;
+     color: #2f2626;
      border-left: solid #38c8a8 10px;
      padding-left: 15px;
 }
@@ -277,7 +277,7 @@ button {
 
 .small_main_heading h2 {
      padding: 2px 0 20px 0;
-     color: #114c7d;
+     color: #4a3534;
      font-weight: 400;
      font-size: 28px;
      background-image: url('../images/fevicon.png');
@@ -450,10 +450,10 @@ nav.main-menu {
 }
 .menu-area-main li:hover a,
 .menu-area-main li:focus a {
-     color: #4ac9f0;
+     color: #d6c20a;
 }
 .menu-area-main li.active a {
-     color: #4ac9f0;
+     color: #d6c20a;
 }
 .right_cart_section {
      float: right;
@@ -797,7 +797,7 @@ nav.main-menu {
      right: -8px;
      top: -8px;
      line-height: initial;
-     background: #38c8a8;
+     background: #d6c20a;
      padding: 3px;
      border-radius: 50%;
      width: 17px;
@@ -1077,7 +1077,7 @@ nav.main-menu {
 
 /*--------------------------------------------------------------------- layout new css ---------------------------------------------------------------------*/
 .head {
-     background: #287d9c;
+     background: #8c3e39;
      height: 50px;
 }
 ul.email_call {
@@ -1102,7 +1102,7 @@ ul.social_icon li {
      margin: 0 4px;
 }
 ul.social_icon li a {
-     color: #023041;
+     color: #EE3A37;
      background: #4ac9f0;
      width: 28px;
      height: 28px;
@@ -1203,7 +1203,7 @@ ul.social_icon li a:hover {
      width: 18px;
      height: 18px;
      border-radius: 20px;
-     background: #4ac9f0;
+     background: #d6c20a;
      margin: 5px 0px;
 }
 .carousel-indicators .active {
@@ -1214,14 +1214,15 @@ ul.social_icon li a:hover {
      display: none;
 }
 
+
 /** three box **/
 .three_box {
-     background: #4ac9f0;
+     background: #ead72c;
      text-align: center;
      padding: 0px 30px 30px 30px;
 }
 .yellow {
-     background: #F8C636 !important;
+     background: #EE3A37 !important;
 }
 .padd_ri {
      padding-right: 0;
@@ -1248,7 +1249,7 @@ ul.social_icon li a:hover {
      text-align: center;
 }
 .three_box h3 {
-     color: #fff;
+     color: rgb(3, 3, 3);
      font-size: 30px;
      line-height: 25px;
      font-weight: 500;
@@ -1257,7 +1258,7 @@ ul.social_icon li a:hover {
 .three_box p {
      font-size: 17px;
      line-height: 35px;
-     color: #fff;
+     color: rgb(0, 0, 0);
 }
 
 /** end three box **/
@@ -1274,12 +1275,12 @@ ul.social_icon li a:hover {
      float: left;
      padding-right: 15px;
      font-weight: bold;
-     border-right: #4ac9f0 solid 2px;
+     border-right: #F8C636 solid 2px;
 }
 .wellcome .titlepage h2::after {
      position: absolute;
      content: "";
-     background: #4ac9f0;
+     background: #F8C636;
      width: 100px;
      bottom: -10px;
      left: 0;
@@ -1300,7 +1301,7 @@ ul.social_icon li a:hover {
 }
 .read_more {
      font-size: 16px;
-     background-color: #041d2c;
+     background-color: #EE3A37;
      color: #fff;
      padding: 10px 0px;
      width: 100%;
@@ -1329,7 +1330,7 @@ ul.social_icon li a:hover {
      margin-bottom: 20px;
 }
 .ourwork {
-     background: #287d9c;
+     background: #EE3A37;
      padding: 90px 0 70px 0;
      background-repeat: no-repeat;
      background-size: cover;
@@ -1344,7 +1345,7 @@ ul.social_icon li a:hover {
 .ourwork .titlepage h2::after {
      position: absolute;
      content: "";
-     background: #4ac9f0;
+     background: #F8C636;
      width: 100px;
      bottom: -10px;
      left: 0;
@@ -1409,7 +1410,7 @@ ul.social_icon li a:hover {
 #main_slider1 .carousel-control-next:hover,
 #main_slider1 .carousel-control-prev:focus,
 #main_slider1 .carousel-control-next:focus {
-     background: #4ac9f0;
+     background: #F8C636;
      color: #fff;
 }
 #main_slider1 a.carousel-control-prev {
@@ -1445,7 +1446,7 @@ ul.social_icon li a:hover {
 .review {
      padding-top: 90px;
      padding-bottom: 90px;
-     background: #1881a8;
+     background: #EE3A37;
      background-repeat: no-repeat;
 }
 .review .titlepage {
@@ -1458,7 +1459,7 @@ ul.social_icon li a:hover {
 .review .titlepage h2::after {
      position: absolute;
      content: "";
-     background: #4ac9f0;
+     background: #F8C636;
      width: 100px;
      bottom: -10px;
      left: 0;
@@ -1582,7 +1583,7 @@ ul.social_icon li a:hover {
      height: 12px;
 }
 .contact .contact {
-     background: #4ac9f0;
+     background: #F8C636;
      width: 100%;
      height: 100%;
      padding: 90px 30px 50px 0px;
@@ -1642,7 +1643,7 @@ ul.social_icon li a:hover {
 .contact .contact .send:hover {
      background-color: #fff;
      transition: ease-in all 0.5s;
-     color: #041d2c;
+     color: #EE3A37;
 }
 #request *::placeholder {
      color: #fff;

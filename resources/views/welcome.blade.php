@@ -65,7 +65,7 @@
                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-9">
                     <div class="menu-area">
                        <div class="limit-box">
-                          <nav class="main-menu py-0">
+                          <nav class="main-menu py-0 .">
                              <ul class="menu-area-main">
                                 <li class="active"> <a href="index.html">INICIO</a> </li>
                                 <li> <a href="#modulos">MÓDULOS</a> </li>
@@ -73,7 +73,6 @@
                                 <li> <a href="#noticias">NOTICIAS</a> </li>
                                 <li> <a href="#actualizaciones">ACTUALIZACIONES</a> </li>
                                 <li> <a href="#contactanos">CONTÁCTANOS</a> </li>
-
                              </ul>
                           </nav>
                        </div>
@@ -83,6 +82,7 @@
                </div>
             </div>
          </div>
+
          <!-- LOGO-->
          <div class="header-top">
             <div class="header">
@@ -92,16 +92,13 @@
                         <div class="full">
                            <div class="center-desk">
                               <div class="logo">
-
                               </div>
                            </div>
                         </div>
                      </div>
-
                   </div>
                </div>
             </div>
-            <!-- END HEADER -->
 
             <!-- CARRUSEL -->
             <section class="slider_section">
@@ -147,7 +144,6 @@
                                        <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
                                        <!--BOTÓN REGISTRARSE -->
                                        <div class=""><a href="{{route('register')}}">Registrarse</a></div>
-
                                     </div>
                                  </div>
                               </div>
@@ -188,7 +184,7 @@
                                        <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
                                        <!--BOTÓN REGISTRARSE -->
                                        <div class=""><a href="{{route('register')}}">Registrarse</a></div>
-                                 </div>
+                                   </div>
                                  </div>
                               </div>
                            </div>
@@ -217,13 +213,13 @@
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padd_rile">
                   <div class="three_box">
                      <span class="yellow" >01</span>
-                     <h3>ESCRITURA</h3>
-                     <p> En nuestro aplicativo web puedes aprender a escribir con nuestros cursos de escritura básica de una forma sencilla, didáctica y adaptable según tu forma de aprender. </p>
+                     <h3 class="colo">ESCRITURA</h3>
+                     <p class="colo"> En nuestro aplicativo web puedes aprender a escribir con nuestros cursos de escritura básica de una forma sencilla, didáctica y adaptable según tu forma de aprender. </p>
                      <br>
                      <!--BOTÓN INICAR SESIÓN -->
-                     <a href="{{route('login')}}"><Button type="button" class="btn btn-warning">Inicia sesión</Button></a>
+                     <a href="{{route('login')}}"><Button type="button" class="btn btn-danger">Inicia sesión</Button></a>
                      <!--BOTÓN REGISTRARSE -->
-                     <a href="{{route('register')}}"><Button type="button" class="btn btn-warning">Registrarse</Button></a>
+                     <a href="{{route('register')}}"><Button type="button" class="btn btn-danger">Registrarse</Button></a>
                   </div>
                </div>
 
@@ -231,13 +227,13 @@
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padding_l">
                   <div class="three_box">
                            <span class="yellow" >02</span>
-                     <h3>LECTURA</h3>
-                     <p>En nuestro aplicativo web puedes aprender a leer con nuestros cursos de lectura básica de una forma sencilla y de la manera que más te gusta aprender.</p>
+                     <h3 class="colo">LECTURA</h3>
+                     <p class="colo">En nuestro aplicativo web puedes aprender a leer con nuestros cursos de lectura básica de una forma sencilla y de la manera que más te gusta aprender.</p>
                      <br>
                      <!--BOTÓN INICAR SESIÓN -->
-                     <a href="{{route('login')}}"><Button type="button" class="btn btn-warning">Inicia sesión</Button></a>
+                     <a href="{{route('login')}}"><Button type="button" class="btn btn-danger">Inicia sesión</Button></a>
                      <!--BOTÓN REGISTRARSE -->
-                     <a href="{{route('register')}}"><Button type="button" class="btn btn-warning">Registrarse</Button></a>
+                     <a href="{{route('register')}}"><Button type="button" class="btn btn-danger">Registrarse</Button></a>
                   </div>
                </div>
 
@@ -245,13 +241,13 @@
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padd_ri">
                   <div class="three_box">
                      <span class="yellow" >03</span>
-                     <h3>MULTIMEDIA</h3>
-                     <p>En nuestro aplicativo web puedes repasar y aprender con el contenido audiovisual que esta actualizado para aprender cosas nuevas. </p>
+                     <h3 class="colo">MULTIMEDIA</h3>
+                     <p class="colo">En nuestro aplicativo web puedes repasar y aprender con el contenido audiovisual que esta actualizado para aprender cosas nuevas. </p>
                      <br>
                      <!--BOTÓN INICAR SESIÓN -->
-                     <a href="{{route('login')}}"><Button type="button" class="btn btn-warning">Inicia sesión</Button></a>
+                     <a href="{{route('login')}}"><Button type="button" class="btn btn-danger">Inicia sesión</Button></a>
                      <!--BOTÓN REGISTRARSE-->
-                     <a href="{{route('register')}}"><Button type="button" class="btn btn-warning">Registrarse</Button></a>
+                     <a href="{{route('register')}}"><Button type="button" class="btn btn-danger">Registrarse</Button></a>
                   </div>
                </div>
             </div>
@@ -363,13 +359,12 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                  
                      <figure><img src="{{asset('images/juego_3.jpeg')}}" width="900px" height="800px"/></figure>
                      <br>
                      <!--BOTÓN INICAR SESIÓN -->
-                     <center><a href="{{route('login')}}"><Button type="button" class="btn btn-primary">Inicia sesión</Button></a>
+                     <center><a href="{{route('login')}}"><Button type="button" class="btn btn-warning">Inicia sesión</Button></a>
                      <!--BOTÓN REGISTRARSE-->
-                     <a href="{{route('register')}}"><Button type="button" class="btn btn-primary">Registrarse</Button></a></center>
+                     <a href="{{route('register')}}"><Button type="button" class="btn btn-warning">Registrarse</Button></a></center>
                   </div>
                </div>
             </div>
@@ -377,7 +372,7 @@
       </div>
 
 
-      <!-- INICIO ACTUALIZACIONES -->
+      <!-- ACTUALIZACIONES -->
       <div id="actualizaciones" class="review">
          <div class="container">
             <div class="row">
@@ -387,6 +382,7 @@
                   </div>
                </div>
             </div>
+
              <!-- JUEGO 1: ¿EN DONDE ESTÁN LAS LETRAS?-->
             <div class="row">
                <div class="col-md-12">
@@ -398,8 +394,6 @@
                                  <img src="{{asset('images/juego_1.jpeg')}}" alt="#"/>
                                  <span>¿EN DONDE ESTÁN LAS LETRAS?</span>
                                  <p>En este juego educativo el estudiante debe encontrar la letra coincidente entre las dos fichas lo más rápido posible. Este juego permite afianzar el reconocimiento visual de las vocales y las consonantes.</p>
-                                 
-                               
                               </div>
                            </div>
                         </div>
@@ -411,7 +405,7 @@
                                  <i><img src="{{asset('images/juego_2.jpeg')}}" alt="#"/></i>
                                  <span>ESCRIBE LA LETRA</span>
                                  <p>En este juego educativo el estudiante debe escribir el trazado de cada letra y tendrá la posibilidad de realizar el trazado de cada letra del abecedario en mayúscula o en minúscula.</p>
-                                 
+
                               </div>
                            </div>
                         </div>
@@ -424,12 +418,9 @@
                               <i><img src="{{asset('images/juego_5.jpeg')}}" alt="#"/></i>
                               <span>ESCRIBE LA PALABRA</span>
                               <p>En este juego educativo el estudiante aprenderá a escribir su nombre en diversos tipos de letra.</p>
-                              
                            </div>
                         </div>
                      </div>
-
-                  
                   </div>
                <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev"> <i class='fa fa-angle-left'></i></a>
                <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next"> <i class='fa fa-angle-right'></i></a>
@@ -490,24 +481,14 @@
                      <div class="follow">
                         <h3>SÍGUENOS</h3>
                         <ul>
-                           <li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                           <li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></i></a></li>
-                           <li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></i></a></li>
+                           <li><a href="https://es-la.facebook.com/bravomarquez"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                            <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></i></a></li>
                         </ul>
                      </div>
                   </div>
                </div>
             </div>
-            <div class="copyright">
-               <div class="container">
-                  <div class="row">
-                     <div class="col-md-12">
 
-                     </div>
-                  </div>
-               </div>
-            </div>
          </div>
       </footer>
       <!-- FIN SÍGUENOS -->
