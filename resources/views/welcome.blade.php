@@ -45,6 +45,7 @@
    </head>
    <!--BODY -->
    <body class="main-layout">
+       <div class="col-md-12">
       <!-- LOADER -->
       <div class="loader_bg">
          <div class="loader"><img src="{{asset('images/loading.gif')}}" alt="#" /></div>
@@ -62,6 +63,7 @@
                   </div>
 
                    <!-- MENÚ -->
+
                    <div class="col-xl-10 col-lg-9 col-md-9 col-sm-9">
                     <div class="menu-area">
                        <div class="limit-box">
@@ -530,5 +532,6 @@
       <!-- google map js -->
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
       <!-- end google map js -->
+    </div>
    </body>
 </html>
