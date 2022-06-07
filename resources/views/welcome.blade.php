@@ -1,89 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
-   <head>
-      <style>
-         .botones{
 
-            padding-left: 20%;
-         }
-         .boton{
-            padding-left: 32%;
-         }
+<head>
+   <style>
+      .botones {
 
-      </style>
-      <!-- METAS BÁSICOS -->
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <!-- METAS PARA EL RESPONSIVE-->
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="viewport" content="initial-scale=1, maximum-scale=1">
-      <!-- TÍTULO -->
-      <title>BOOK</title>
-      <!-- METAS GENERALES-->
-      <meta name="keywords" content="">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <!-- BOOTSTRAP CSS-->
-      <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
-      <!-- STYLE CSS -->
-      <link rel="stylesheet" href="{{asset('css/style.css')}}">
-      <!-- RESPONSIVE-->
-      <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
-      <!-- FEVICON -->
-      <link rel="icon" href="{{asset('images/fevicon.png')}}" type="image/gif" />
-      <!-- SCROLLBAR CUSTOMCSS -->
-      <link rel="stylesheet" href="{{asset('css/jquery.mCustomScrollbar.min.css')}}">
-      <!-- TWEAKS FOR OLDER IES-->
-      <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
-      <!--[if lt IE 9]>
+         padding-left: 20%;
+      }
+
+      .boton {
+         padding-left: 32%;
+      }
+   </style>
+   <!-- METAS BÁSICOS -->
+   <meta charset="utf-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <!-- METAS PARA EL RESPONSIVE-->
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+   <!-- TÍTULO -->
+   <title>BOOK</title>
+   <!-- METAS GENERALES-->
+   <meta name="keywords" content="">
+   <meta name="description" content="">
+   <meta name="author" content="">
+   <!-- BOOTSTRAP CSS-->
+   <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+   <!-- STYLE CSS -->
+   <link rel="stylesheet" href="{{asset('css/style.css')}}">
+   <!-- RESPONSIVE-->
+   <link rel="stylesheet" href="{{asset('css/responsive.css')}}">
+   <!-- FEVICON -->
+   <link rel="icon" href="{{asset('images/fevicon.png')}}" type="image/gif" />
+   <!-- SCROLLBAR CUSTOMCSS -->
+   <link rel="stylesheet" href="{{asset('css/jquery.mCustomScrollbar.min.css')}}">
+   <!-- TWEAKS FOR OLDER IES-->
+   <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" media="screen">
+   <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-      <link rel="shortcut icon" href="images/logo_blanco.png" />
-      <link rel="icon" type="image/x-icon" href="../BOOK1/BOOK/images/logo_blanco.png" />
+   <link rel="shortcut icon" href="images/logo_blanco.png" />
+   <link rel="icon" type="image/x-icon" href="../BOOK1/BOOK/images/logo_blanco.png" />
 
-   </head>
-   <!--BODY -->
-   <body class="main-layout">
-       <div class="col-md-12">
+</head>
+<!--BODY -->
+
+<body class="main-layout">
+   <div class="col-md-12">
       <!-- LOADER -->
       <div class="loader_bg">
          <div class="loader"><img src="{{asset('images/loading.gif')}}" alt="#" /></div>
       </div>
       <!-- END LOADER -->
-      <!-- HEADER -->
       <header>
-         <!-- HEADER INNER -->
-         <div class="head">
-            <div  class="container">
-               <div class="row ">
-                  <div  class="col-md-6">
-                     <ul class="email_call">
-                     </ul>
-                  </div>
 
-                   <!-- MENÚ -->
+         <!-- MENÚ -->
+         <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+               <span class="navbar-toggler-icon"></span>
+            </button>
 
-                   <div class="col-xl-10 col-lg-9 col-md-9 col-sm-9">
-                    <div class="menu-area">
-                       <div class="limit-box">
-                          <nav class="main-menu py-0 .">
-                             <ul class="menu-area-main">
-                                <li class="active"> <a href="index.html">INICIO</a> </li>
-                                <li> <a href="#modulos">MÓDULOS</a> </li>
-                                <li> <a href="#acompañamiento">ACOMPAÑAMIENTO</a> </li>
-                                <li> <a href="#noticias">NOTICIAS</a> </li>
-                                <li> <a href="#actualizaciones">ACTUALIZACIONES</a> </li>
-                                <li> <a href="#contactanos">CONTÁCTANOS</a> </li>
-                             </ul>
-                          </nav>
-                       </div>
-                    </div>
-                 </div>
-                  </div>
+            <!-- INICIO -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               <ul class="navbar-nav mr-auto">
+                  <li class="nav-item active">
+                     <a class="nav-link text-white" href="#inicio">Inicio <span class="sr-only">(current)</span></a>
+                  </li>
+
+                  <!-- MÓDULOS-->
+                  <li class="nav-item">
+                     <a class="nav-link disabled text-white" href="#modulos">Módulos</a>
+                  </li>
+
+                  <!-- ACOMPAÑAMIENTO -->
+                  </li>
+                  <li class="nav-item">
+                     <a class="nav-link disabled text-white" href="#acompañamiento">Acompañamiento</a>
+                  </li>
+
+                  <!--NOTICIAS -->
+                  <li class="nav-item">
+                     <a class="nav-link disabled text-white" href="#noticias">Noticias</a>
+                  </li>
+
+                  <!-- JUEGOS -->
+                  <li class="nav-item">
+                     <a class="nav-link disabled text-white" href="#juegos">Juegos</a>
+                  </li>
+
+                  <!-- ACTUALIZACIONES -->
+                  <li class="nav-item">
+                     <a class="nav-link disabled text-white" href="#actualizaciones">Actualizaciones</a>
+                  </li>
+
+                  <!--CONTÁCTANOS -->
+                  <li class="nav-item">
+                     <a class="nav-link disabled text-white" href="#contactanos">Contáctanos</a>
+                  </li>
+               </ul>
+
+               <!-- BOTÓN REGISTRARSE -->
+               <div class="buttons-login">
+                  <a class="btn btn-outline-light my-2 my-sm-0 text-white" href="{{route('register')}} ">Registrarse</a>
+                  <!-- BOTÓN INICIAR SESIÓN -->
+                  <a class="btn btn-outline-light my-2 my-sm-0 text-white" href="{{route('login')}}">Iniciar sesión</a>
                </div>
             </div>
-         </div>
+         </nav>
+
 
          <!-- LOGO-->
          <div class="header-top">
@@ -141,7 +166,7 @@
                                  <div class="col-md-7">
                                     <div class="text-bg">
                                        <span>CONTRIBUIMOS CON EL FUTURO</span>
-                                       <p> En BOOK estamos contribuyendo con el futuro de los estudiantes, proporcionándole herramientas para que  obtengan un excelente desempeño en los retos que se le presenten y así se sientan seguros de afrontarlo.</p>
+                                       <p> En BOOK estamos contribuyendo con el futuro de los estudiantes, proporcionándole herramientas para que obtengan un excelente desempeño en los retos que se le presenten y así se sientan seguros de afrontarlo.</p>
                                        <!--BOTÓN INICAR SESIÓN -->
                                        <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
                                        <!--BOTÓN REGISTRARSE -->
@@ -161,7 +186,7 @@
                                  <div class="col-md-7">
                                     <div class="text-bg">
                                        <span>EN BOOK TE OFRECEMOS</span>
-                                       <p>En BOOK te ofrecemos múltiples opciones para los estudiantes: memorización visual y auditiva, mejora de la comprensión, discriminación de vocales y consonantes, escribir el trazo de las letras del alfabeto y ampliar el vocabulario con animaciones de objetos, animales ,etc.  </p>
+                                       <p>En BOOK te ofrecemos múltiples opciones para los estudiantes: memorización visual y auditiva, mejora de la comprensión, discriminación de vocales y consonantes, escribir el trazo de las letras del alfabeto y ampliar el vocabulario con animaciones de objetos, animales ,etc. </p>
                                        <!--BOTÓN INICAR SESIÓN -->
                                        <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
                                        <!--BOTÓN REGISTRARSE -->
@@ -186,7 +211,7 @@
                                        <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
                                        <!--BOTÓN REGISTRARSE -->
                                        <div class=""><a href="{{route('register')}}">Registrarse</a></div>
-                                   </div>
+                                    </div>
                                  </div>
                               </div>
                            </div>
@@ -194,12 +219,12 @@
                      </div>
                   </div>
                   <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Previous</span>
+                     <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Previous</span>
                   </a>
                   <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="sr-only">Next</span>
+                     <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                     <span class="sr-only">Next</span>
                   </a>
                </div>
             </section>
@@ -211,10 +236,10 @@
          <div class="container-fluid">
             <div class="row">
 
-                <!-- ESCRITURA-->
+               <!-- ESCRITURA-->
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padd_rile">
                   <div class="three_box">
-                     <span class="yellow" >01</span>
+                     <span class="yellow">01</span>
                      <h3 class="colo">ESCRITURA</h3>
                      <p class="colo"> En nuestro aplicativo web puedes aprender a escribir con nuestros cursos de escritura básica de una forma sencilla, didáctica y adaptable según tu forma de aprender. </p>
                      <br>
@@ -225,10 +250,10 @@
                   </div>
                </div>
 
-                <!-- LECTURA -->
+               <!-- LECTURA -->
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padding_l">
                   <div class="three_box">
-                           <span class="yellow" >02</span>
+                     <span class="yellow">02</span>
                      <h3 class="colo">LECTURA</h3>
                      <p class="colo">En nuestro aplicativo web puedes aprender a leer con nuestros cursos de lectura básica de una forma sencilla y de la manera que más te gusta aprender.</p>
                      <br>
@@ -239,10 +264,10 @@
                   </div>
                </div>
 
-                <!-- MULTIMEDIA -->
+               <!-- MULTIMEDIA -->
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padd_ri">
                   <div class="three_box">
-                     <span class="yellow" >03</span>
+                     <span class="yellow">03</span>
                      <h3 class="colo">MULTIMEDIA</h3>
                      <p class="colo">En nuestro aplicativo web puedes repasar y aprender con el contenido audiovisual que esta actualizado para aprender cosas nuevas. </p>
                      <br>
@@ -268,7 +293,7 @@
                   </div>
                </div>
             </div>
-             <!-- IMÁGENES  -->
+            <!-- IMÁGENES  -->
             <div class="row">
                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
                   <div class="wellcome-box">
@@ -305,20 +330,20 @@
                                  <div class="row d_flex">
                                     <div class="col-md-3">
                                        <div class="our">
-                                          <figure><img src="{{asset('images/tienda.jfif')}}" alt="#"/></figure>
+                                          <figure><img src="{{asset('images/tienda.jfif')}}" alt="#" /></figure>
                                           <p>Resolución Rectoral- N07 - Apertura Proceso tienda escolar Sede 1 - 2022 </p>
                                        </div>
                                     </div>
                                     <div class="col-md-5">
                                        <div class="our">
-                                          <figure><img src="images/tienda_2.jfif" alt="#"/></figure>
+                                          <figure><img src="images/tienda_2.jfif" alt="#" /></figure>
                                           <p>
                                              Resolución Rectoral - N08 - Apertura Proceso tienda escolar Sede 2 - 2022 </p>
                                        </div>
                                     </div>
                                     <div class="col-md-3">
                                        <div class="our">
-                                          <figure><img src="{{asset('images/papeleria.jpg')}}" alt="#"/></figure>
+                                          <figure><img src="{{asset('images/papeleria.jpg')}}" alt="#" /></figure>
                                           <p>Resolución Rectoral - N09 - Apertura Proceso papelería sede 1 - 2022 </p>
                                        </div>
                                     </div>
@@ -332,13 +357,13 @@
                                  <div class="row d_flex">
                                     <div class="col-md-3">
                                        <div class="our">
-                                          <figure><img src="{{asset('images/juego_6.jpeg')}}" alt="#"/></figure>
-                                          <p>Tenemos un juego educativo disponible  </p>
+                                          <figure><img src="{{asset('images/juego_6.jpeg')}}" alt="#" /></figure>
+                                          <p>Tenemos un juego educativo disponible </p>
                                        </div>
                                     </div>
                                     <div class="col-md-5">
                                        <div class="our">
-                                          <figure><img src="{{asset('images/juego_9.png')}}" alt="#"/></figure>
+                                          <figure><img src="{{asset('images/juego_9.png')}}" alt="#" /></figure>
                                           <p>Nuevo juego educativo: organiza las palabras</p>
                                        </div>
                                     </div>
@@ -361,177 +386,179 @@
          <div class="container">
             <div class="row">
                <div class="col-md-12">
-                     <figure><img src="{{asset('images/juego_3.jpeg')}}" width="900px" height="800px"/></figure>
-                     <br>
-                     <!--BOTÓN INICAR SESIÓN -->
-                     <center><a href="{{route('login')}}"><Button type="button" class="btn btn-warning">Inicia sesión</Button></a>
+                  <figure><img src="{{asset('images/juego_3.jpeg')}}" width="900px" height="800px" /></figure>
+                  <br>
+                  <!--BOTÓN INICAR SESIÓN -->
+                  <center><a href="{{route('login')}}"><Button type="button" class="btn btn-warning">Inicia sesión</Button></a>
                      <!--BOTÓN REGISTRARSE-->
-                     <a href="{{route('register')}}"><Button type="button" class="btn btn-warning">Registrarse</Button></a></center>
-                  </div>
+                     <a href="{{route('register')}}"><Button type="button" class="btn btn-warning">Registrarse</Button></a>
+                  </center>
                </div>
             </div>
          </div>
       </div>
+   </div>
 
 
-      <!-- ACTUALIZACIONES -->
-      <div id="actualizaciones" class="review">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-12">
-                  <div class="titlepage">
-                     <h2>ACTUALIZACIONES</h2>
-                  </div>
+   <!-- ACTUALIZACIONES -->
+   <div id="actualizaciones" class="review">
+      <div class="container">
+         <div class="row">
+            <div class="col-md-12">
+               <div class="titlepage">
+                  <h2>ACTUALIZACIONES</h2>
                </div>
             </div>
+         </div>
 
-             <!-- JUEGO 1: ¿EN DONDE ESTÁN LAS LETRAS?-->
-            <div class="row">
-               <div class="col-md-12">
-                  <div id="main_slider" class="carousel slide banner-main2" data-ride="carousel">
-                     <div class="carousel-inner">
-                        <div class="carousel-item active">
-                           <div class="container">
-                              <div class="carousel-caption">
-                                 <img src="{{asset('images/juego_1.jpeg')}}" alt="#"/>
-                                 <span>¿EN DONDE ESTÁN LAS LETRAS?</span>
-                                 <p>En este juego educativo el estudiante debe encontrar la letra coincidente entre las dos fichas lo más rápido posible. Este juego permite afianzar el reconocimiento visual de las vocales y las consonantes.</p>
-                              </div>
+         <!-- JUEGO 1: ¿EN DONDE ESTÁN LAS LETRAS?-->
+         <div class="row">
+            <div class="col-md-12">
+               <div id="main_slider" class="carousel slide banner-main2" data-ride="carousel">
+                  <div class="carousel-inner">
+                     <div class="carousel-item active">
+                        <div class="container">
+                           <div class="carousel-caption">
+                              <img src="{{asset('images/juego_1.jpeg')}}" alt="#" />
+                              <span>¿EN DONDE ESTÁN LAS LETRAS?</span>
+                              <p>En este juego educativo el estudiante debe encontrar la letra coincidente entre las dos fichas lo más rápido posible. Este juego permite afianzar el reconocimiento visual de las vocales y las consonantes.</p>
                            </div>
                         </div>
+                     </div>
 
-                         <!--JUEGO 2: ESCRIBE LA LETRA-->
-                        <div class="carousel-item">
-                           <div class="container">
-                              <div class="carousel-caption">
-                                 <i><img src="{{asset('images/juego_2.jpeg')}}" alt="#"/></i>
-                                 <span>ESCRIBE LA LETRA</span>
-                                 <p>En este juego educativo el estudiante debe escribir el trazado de cada letra y tendrá la posibilidad de realizar el trazado de cada letra del abecedario en mayúscula o en minúscula.</p>
+                     <!--JUEGO 2: ESCRIBE LA LETRA-->
+                     <div class="carousel-item">
+                        <div class="container">
+                           <div class="carousel-caption">
+                              <i><img src="{{asset('images/juego_2.jpeg')}}" alt="#" /></i>
+                              <span>ESCRIBE LA LETRA</span>
+                              <p>En este juego educativo el estudiante debe escribir el trazado de cada letra y tendrá la posibilidad de realizar el trazado de cada letra del abecedario en mayúscula o en minúscula.</p>
 
-                              </div>
                            </div>
                         </div>
+                     </div>
 
 
                      <!--JUEGO 4: ESCRIBE LA PALABRA-->
                      <div class="carousel-item">
                         <div class="container">
                            <div class="carousel-caption">
-                              <i><img src="{{asset('images/juego_5.jpeg')}}" alt="#"/></i>
+                              <i><img src="{{asset('images/juego_5.jpeg')}}" alt="#" /></i>
                               <span>ESCRIBE LA PALABRA</span>
                               <p>En este juego educativo el estudiante aprenderá a escribir su nombre en diversos tipos de letra.</p>
                            </div>
                         </div>
                      </div>
                   </div>
-               <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev"> <i class='fa fa-angle-left'></i></a>
-               <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next"> <i class='fa fa-angle-right'></i></a>
+                  <a class="carousel-control-prev" href="#main_slider" role="button" data-slide="prev"> <i class='fa fa-angle-left'></i></a>
+                  <a class="carousel-control-next" href="#main_slider" role="button" data-slide="next"> <i class='fa fa-angle-right'></i></a>
+               </div>
             </div>
          </div>
       </div>
    </div>
-</div>
-      <!--FIN ACTUALIZACIONES-->
+   <!--FIN ACTUALIZACIONES-->
 
 
-      <!--INICIO CONTÁCTANOS -->
-      <div id="contactanos" class="contact">
-         <div class="container-fluid">
-            <div class="row">
-               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding-left1">
-                  <div class="contact">
-                     <div class="titlepage">
-                        <h2>CONTÁCTANOS</h2>
-                     </div>
-                     <form class="request">
-                        <div class="row">
-                           <div class="col-sm-12">
-                              <input class="contactus" placeholder="Nombre" type="text" name="Nombre">
-                           </div>
-                           <div class="col-sm-12">
-                              <input class="contactus" placeholder="Celular" type="text" name="Celular">
-                           </div>
-                           <div class="col-sm-12">
-                              <input class="contactus" placeholder="Email" type="text" name="Email">
-                           </div>
-                           <div class="col-sm-12">
-                              <textarea class="textarea" placeholder="Mensaje" type="text" name="Mensaje"></textarea>
-                           </div>
-                           <div class="col-sm-12">
-                              <button class="send">Enviar</button>
-                           </div>
+   <!--INICIO CONTÁCTANOS -->
+   <div id="contactanos" class="contact">
+      <div class="container-fluid">
+         <div class="row">
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding-left1">
+               <div class="contact">
+                  <div class="titlepage">
+                     <h2>CONTÁCTANOS</h2>
+                  </div>
+                  <form class="request">
+                     <div class="row">
+                        <div class="col-sm-12">
+                           <input class="contactus" placeholder="Nombre" type="text" name="Nombre">
                         </div>
-                     </form>
-                  </div>
+                        <div class="col-sm-12">
+                           <input class="contactus" placeholder="Celular" type="text" name="Celular">
+                        </div>
+                        <div class="col-sm-12">
+                           <input class="contactus" placeholder="Email" type="text" name="Email">
+                        </div>
+                        <div class="col-sm-12">
+                           <textarea class="textarea" placeholder="Mensaje" type="text" name="Mensaje"></textarea>
+                        </div>
+                        <div class="col-sm-12">
+                           <button class="send">Enviar</button>
+                        </div>
+                     </div>
+                  </form>
                </div>
-               <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding-right1">
-                  <div id="map">
-                  </div>
+            </div>
+            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12 padding-right1">
+               <div id="map">
                </div>
             </div>
          </div>
       </div>
-      <!-- FIN CONTÁCTANOS -->
+   </div>
+   <!-- FIN CONTÁCTANOS -->
 
 
-      <!--  SÍGUENOS -->
-      <footer>
-         <div class="footer">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-12">
-                     <div class="follow">
-                        <h3>SÍGUENOS</h3>
-                        <ul>
-                           <li><a href="https://es-la.facebook.com/bravomarquez"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                           <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></i></a></li>
-                        </ul>
-                     </div>
+   <!--  SÍGUENOS -->
+   <footer>
+      <div class="footer">
+         <div class="container">
+            <div class="row">
+               <div class="col-md-12">
+                  <div class="follow">
+                     <h3>SÍGUENOS</h3>
+                     <ul>
+                        <li><a href="https://es-la.facebook.com/bravomarquez"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></i></a></li>
+                     </ul>
                   </div>
                </div>
             </div>
-
          </div>
-      </footer>
-      <!-- FIN SÍGUENOS -->
+
+      </div>
+   </footer>
+   <!-- FIN SÍGUENOS -->
 
 
-      <!-- Javascript files-->
-      <script src="{{asset('js/jquery.min.js')}}"></script>
-      <script src="{{asset('js/popper.min.js')}}"></script>
-      <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
-      <script src="{{asset('js/jquery-3.0.0.min.js')}}"></script>
-      <script src="{{asset('js/plugin.js')}}"></script>
-      <!-- sidebar -->
-      <script src="{{asset('js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
-      <script src="{{asset('js/custom.js')}}"></script>
-      <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
-      <script>
-         // This example adds a marker to indicate the position of Bondi Beach in Sydney,
-         // Australia.
-         function initMap() {
-             var map = new google.maps.Map(document.getElementById('map'), {
-                 zoom: 11,
-                 center: {
-                     lat: 40.645037,
-                     lng: -73.880224
-                 },
-             });
+   <!-- Javascript files-->
+   <script src="{{asset('js/jquery.min.js')}}"></script>
+   <script src="{{asset('js/popper.min.js')}}"></script>
+   <script src="{{asset('js/bootstrap.bundle.min.js')}}"></script>
+   <script src="{{asset('js/jquery-3.0.0.min.js')}}"></script>
+   <script src="{{asset('js/plugin.js')}}"></script>
+   <!-- sidebar -->
+   <script src="{{asset('js/jquery.mCustomScrollbar.concat.min.js')}}"></script>
+   <script src="{{asset('js/custom.js')}}"></script>
+   <script src="https:cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
+   <script>
+      // This example adds a marker to indicate the position of Bondi Beach in Sydney,
+      // Australia.
+      function initMap() {
+         var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 11,
+            center: {
+               lat: 40.645037,
+               lng: -73.880224
+            },
+         });
 
-             var image = 'images/maps-and-flags.png';
-             var beachMarker = new google.maps.Marker({
-                 position: {
-                     lat: 40.645037,
-                     lng: -73.880224
-                 },
-                 map: map,
-                 icon: image
-             });
-         }
-      </script>
-      <!-- google map js -->
-      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
-      <!-- end google map js -->
-    </div>
-   </body>
+         var image = 'images/maps-and-flags.png';
+         var beachMarker = new google.maps.Marker({
+            position: {
+               lat: 40.645037,
+               lng: -73.880224
+            },
+            map: map,
+            icon: image
+         });
+      }
+   </script>
+   <!-- google map js -->
+   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA8eaHt9Dh5H57Zh0xVTqxVdBFCvFMqFjQ&callback=initMap"></script>
+   <!-- end google map js -->
+   </div>
+</body>
+
 </html>

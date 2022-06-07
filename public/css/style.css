@@ -1116,6 +1116,7 @@ ul.social_icon li a {
 ul.social_icon li a:hover {
      color: #fff;
 }
+/*fONDO*/
 .header-top {
      background: url(../images/fondo.png);
      background-size: 100% 100%;
@@ -1215,9 +1216,9 @@ ul.social_icon li a:hover {
 }
 
 
-/** three box **/
+/** MODULOS **/
 .three_box {
-     background: #ead72c;
+     background: #F8C636;
      text-align: center;
      padding: 0px 30px 30px 30px;
 }
@@ -1248,8 +1249,9 @@ ul.social_icon li a:hover {
      margin-top: -25px;
      text-align: center;
 }
+/** LETRA MODULOS **/
 .three_box h3 {
-     color: rgb(3, 3, 3);
+     color: rgb(24, 25, 25);
      font-size: 30px;
      line-height: 25px;
      font-weight: 500;
@@ -1582,8 +1584,9 @@ ul.social_icon li a:hover {
      left: 0;
      height: 12px;
 }
+/** CONTACTO **/
 .contact .contact {
-     background: #ead72c;
+     background: #F8C636;
      width: 100%;
      height: 100%;
      padding: 90px 30px 50px 0px;
@@ -1629,6 +1632,7 @@ ul.social_icon li a:hover {
      border-top: 0;
      border-left: 0;
 }
+/*BOTÓN ENVIAR*/
 .contact .contact .send {
      font-size: 17px;
      transition: ease-in all 0.5s;
@@ -1707,5 +1711,10 @@ ul.social_icon li a:hover {
      color: #000;
 }
 
+/** BOTONES INICIO **/
+.buttons-login {
+     display: flex;
+     gap: 10%;
+     margin-right: 5%;
+}
 /** end footer **/
-
