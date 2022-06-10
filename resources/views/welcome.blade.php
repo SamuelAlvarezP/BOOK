@@ -148,9 +148,9 @@
                                        <span>BIENVENIDOS A BOOK</span>
                                        <p> En BOOK estamos generando métodos para facilitar el aprendizaje de los estudiantes, mejorando su rendimiento escolar para que tengan una mejor experiencia educativa en sus próximos años, nuestro contenido es accesible para todas las edades y se adaptará a su nivel de aprendizaje, podrán progresar en la formación de palabras, ampliar su vocabulario e iniciarse en su capacidad de aprende a leer y escribir. ¡Comienza ahora!</p>
                                        <!--BOTÓN INICAR SESIÓN -->
-                                       <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
+                                       <a class="buttons-login" href="{{route('login')}}">Inicia sesión</a>
                                        <!--BOTÓN REGISTRARSE -->
-                                       <div class=""><a href="{{route('register')}}">Registrarse</a></div>
+                                       <a class="buttons-login" href="{{route('register')}}">Registrarse</a>
                                     </div>
                                  </div>
                               </div>
@@ -167,10 +167,10 @@
                                     <div class="text-bg">
                                        <span>CONTRIBUIMOS CON EL FUTURO</span>
                                        <p> En BOOK estamos contribuyendo con el futuro de los estudiantes, proporcionándole herramientas para que obtengan un excelente desempeño en los retos que se le presenten y así se sientan seguros de afrontarlo.</p>
-                                       <!--BOTÓN INICAR SESIÓN -->
-                                       <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
+                                        <!--BOTÓN INICAR SESIÓN -->
+                                        <a class="buttons-login" href="{{route('login')}}">Inicia sesión</a>
                                        <!--BOTÓN REGISTRARSE -->
-                                       <div class=""><a href="{{route('register')}}">Registrarse</a></div>
+                                       <a class="buttons-login" href="{{route('register')}}">Registrarse</a>
                                     </div>
                                  </div>
                               </div>
@@ -187,10 +187,10 @@
                                     <div class="text-bg">
                                        <span>EN BOOK TE OFRECEMOS</span>
                                        <p>En BOOK te ofrecemos múltiples opciones para los estudiantes: memorización visual y auditiva, mejora de la comprensión, discriminación de vocales y consonantes, escribir el trazo de las letras del alfabeto y ampliar el vocabulario con animaciones de objetos, animales ,etc. </p>
-                                       <!--BOTÓN INICAR SESIÓN -->
-                                       <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
+                                        <!--BOTÓN INICAR SESIÓN -->
+                                        <a class="buttons-login" href="{{route('login')}}">Inicia sesión</a>
                                        <!--BOTÓN REGISTRARSE -->
-                                       <div class=""><a href="{{route('register')}}">Registrarse</a></div>
+                                       <a class="buttons-login" href="{{route('register')}}">Registrarse</a>
                                     </div>
                                  </div>
                               </div>
@@ -208,9 +208,9 @@
                                        <span>APRENDIZAJE FÁCIL Y RÁPIDO</span>
                                        <p> Aprende a leer y escribir de una forma didáctica y sencilla, si deseas puedes reforzar lo que ya sabes para tener mejor desempeño en tus estudios, Incorporamos actividades de reconocimiento auditivo para esta etapa de su aprendizaje. ¡Inicia ahora!</p>
                                        <!--BOTÓN INICAR SESIÓN -->
-                                       <div class=""><a href="{{route('login')}}">Inicia sesión</a></div>
+                                     <a class="buttons-login" href="{{route('login')}}">Inicia sesión</a>
                                        <!--BOTÓN REGISTRARSE -->
-                                       <div class=""><a href="{{route('register')}}">Registrarse</a></div>
+                                       <a class="buttons-login" href="{{route('register')}}">Registrarse</a>
                                     </div>
                                  </div>
                               </div>

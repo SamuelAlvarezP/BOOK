@@ -1175,14 +1175,13 @@ ul.social_icon li a:hover {
      float: left;
      display: inline-block;
 }
+/** BOTÓN LETRA CARRUSEL **/
 .text-bg a:hover {
-     background-color: #4ac9f0;
      color: #fff;
 }
 .text {
      position: inherit;
      text-align: left;
-     background: #0fbbad;
      width: 100%;
      bottom: auto;
      padding: 0;
@@ -1204,12 +1203,13 @@ ul.social_icon li a:hover {
      width: 18px;
      height: 18px;
      border-radius: 20px;
-     background: #d6c20a;
+     background: #ffedbb;
      margin: 5px 0px;
 }
 .carousel-indicators .active {
      background-color: #020607;
 }
+/** CONTROL CARRUSEL **/
 #myCarousel .carousel-control-prev,
 #myCarousel .carousel-control-next {
      display: none;
@@ -1218,7 +1218,7 @@ ul.social_icon li a:hover {
 
 /** MODULOS **/
 .three_box {
-     background: #F8C636;
+     background: #ffedbb;
      text-align: center;
      padding: 0px 30px 30px 30px;
 }
@@ -1717,4 +1717,5 @@ ul.social_icon li a:hover {
      gap: 10%;
      margin-right: 5%;
 }
+
 /** end footer **/
