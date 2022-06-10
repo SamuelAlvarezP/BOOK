@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-06-2022 a las 17:27:07
+-- Tiempo de generación: 10-06-2022 a las 15:07:14
 -- Versión del servidor: 10.4.21-MariaDB
 -- Versión de PHP: 8.0.12
 
@@ -316,9 +316,7 @@ CREATE TABLE `sessions` (
 --
 
 INSERT INTO `sessions` (`id`, `user_id`, `ip_address`, `user_agent`, `payload`, `last_activity`) VALUES
-('c2fmIyezhBqHiUE0OEa81Ic9fr3l4EKAKbxPaGYs', 10, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiMlU2UDNVVVRsOW9xNHF5QlIwUzUybnRyelR1akV6UEFibktXaGtCUyI7czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTA7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRWTC5QMkouZkpqNGM0VWlEdG5JMHdlbUIudjlkNHZyZ1ZtalVyQUxKOE94QVdLdHZJbDlkdSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jdXJzb3MiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRWTC5QMkouZkpqNGM0VWlEdG5JMHdlbUIudjlkNHZyZ1ZtalVyQUxKOE94QVdLdHZJbDlkdSI7fQ==', 1653397189),
-('eeVgDR6aWrYrEadQXxjTgM2giEWzDJhdjb7OSamc', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiYVQ1bXhaQ2dQWWlqZkQwRUlHdjFlTllqY3FWYTJkOXVLd0VBSXVIYyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1653999533),
-('nv461roLxzq8lbWyBBtQNmBbRRfuuSA2VI7ZekZF', 10, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/101.0.4951.67 Safari/537.36', 'YTo2OntzOjY6Il90b2tlbiI7czo0MDoiMWM1ZVRSWkN4VWFQWkNnREtVNFRWNEdLbHRRUkx1OWIxRHN5NUJ0TyI7czo1MDoibG9naW5fd2ViXzU5YmEzNmFkZGMyYjJmOTQwMTU4MGYwMTRjN2Y1OGVhNGUzMDk4OWQiO2k6MTA7czoxNzoicGFzc3dvcmRfaGFzaF93ZWIiO3M6NjA6IiQyeSQxMCRWTC5QMkouZkpqNGM0VWlEdG5JMHdlbUIudjlkNHZyZ1ZtalVyQUxKOE94QVdLdHZJbDlkdSI7czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6Mjg6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMC9jdXJzb3MiO31zOjY6Il9mbGFzaCI7YToyOntzOjM6Im9sZCI7YTowOnt9czozOiJuZXciO2E6MDp7fX1zOjIxOiJwYXNzd29yZF9oYXNoX3NhbmN0dW0iO3M6NjA6IiQyeSQxMCRWTC5QMkouZkpqNGM0VWlEdG5JMHdlbUIudjlkNHZyZ1ZtalVyQUxKOE94QVdLdHZJbDlkdSI7fQ==', 1653406179);
+('w9zstqsqcXTM9YErOdoi1TDhLHo7EJUUqpExsxOm', NULL, '127.0.0.1', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.127 Safari/537.36 OPR/86.0.4363.70', 'YTozOntzOjY6Il90b2tlbiI7czo0MDoiT2JkZ0ZaSlFqZ0pZdHZLWkVKaUNZbjg1d1YwNVBlYlU2NG5vUXU4YyI7czo2OiJfZmxhc2giO2E6Mjp7czozOiJvbGQiO2E6MDp7fXM6MzoibmV3IjthOjA6e319czo5OiJfcHJldmlvdXMiO2E6MTp7czozOiJ1cmwiO3M6MjE6Imh0dHA6Ly8xMjcuMC4wLjE6ODAwMCI7fX0=', 1654863867);
 
 -- --------------------------------------------------------
 
@@ -347,7 +345,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `two_factor_secret`, `two_factor_recovery_codes`, `remember_token`, `current_team_id`, `profile_photo_path`, `created_at`, `updated_at`) VALUES
 (3, 'Andres', 'jave@gmail.com', NULL, '$2y$10$V4XZWkxbXhghjKHVZMU6ze9dniiWEpY7pkipVvI.Vgu0qeNL90uO6', NULL, NULL, NULL, NULL, NULL, '2022-05-05 19:11:13', '2022-05-05 19:11:13'),
-(10, 'Samuel', 'boxmastr5@gmail.com', NULL, '$2y$10$VL.P2J.fJj4c4UiDtnI0wemB.v9d4vrgVmjUrALJ8OxAWKtvIl9du', NULL, NULL, 'fHcHZHWV6RzgYycWoJUD95fun6B6XkUTs6d7RPrq6MBpY4iynwSw6HSZjTyV', NULL, NULL, '2022-05-10 16:50:45', '2022-05-10 16:50:45'),
+(10, 'Samuel', 'boxmastr5@gmail.com', NULL, '$2y$10$VL.P2J.fJj4c4UiDtnI0wemB.v9d4vrgVmjUrALJ8OxAWKtvIl9du', NULL, NULL, 'TTUYM0iOMXXW46suK9xvizVqd2rntFYB0lzmJZBwAytL3NN7EgBAfa5fv7mB', NULL, NULL, '2022-05-10 16:50:45', '2022-05-10 16:50:45'),
 (18, 'Camilo', 'a@gmail.com', NULL, '$2y$10$M7IjMVPfB7yerVgEDnkAOOmthRAfMoZ7wD5IGLIFJFk0/Hnt.G0/u', NULL, NULL, NULL, NULL, NULL, '2022-05-13 21:34:41', '2022-05-13 21:34:41'),
 (19, 'Camilo', 'mevaleynomegusta@gmail.com', NULL, '$2y$10$Z9gkvoFN7q4bHUeNyKG4hekwLKrEU6Cm64p.cdh/oANG7a2Hyh1xu', NULL, NULL, NULL, NULL, NULL, '2022-05-17 19:14:28', '2022-05-17 19:14:28');
 
