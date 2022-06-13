@@ -47,7 +47,7 @@
 <!--BODY -->
 
 <body class="main-layout">
-   <div class="col-md-12">
+   <div class="col-md-15">
       <!-- LOADER -->
       <div class="loader_bg">
          <div class="loader"><img src="{{asset('images/loading.gif')}}" alt="#" /></div>
@@ -383,6 +383,7 @@
 
       <!-- IMAGEN -->
       <div class="Better">
+        <div id="juegos">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
@@ -396,6 +397,7 @@
                </div>
             </div>
          </div>
+      </div>
       </div>
    </div>
 
@@ -500,26 +502,21 @@
    <!-- FIN CONTÁCTANOS -->
 
 
-   <!--  SÍGUENOS -->
+   <!--FOOTER -->
    <footer>
       <div class="footer">
          <div class="container">
             <div class="row">
                <div class="col-md-12">
                   <div class="follow">
-                     <h3>SÍGUENOS</h3>
-                     <ul>
-                        <li><a href="https://es-la.facebook.com/bravomarquez"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a href="#"><i class="fa fa-linkedin-square" aria-hidden="true"></i></i></a></li>
-                     </ul>
+
                   </div>
                </div>
             </div>
          </div>
-
       </div>
    </footer>
-   <!-- FIN SÍGUENOS -->
+   <!-- FIN FOOTER -->
 
 
    <!-- Javascript files-->
