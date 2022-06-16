@@ -471,22 +471,38 @@
                   <div class="titlepage">
                      <h2>CONTÁCTANOS</h2>
                   </div>
-                  <form class="request">
+                  <form class="request" action="{{route('contactanos.index')}}" method="POST">
+                  @csrf
+                  @if (session('info'))
+                    <div class="alert alert-success">{{session('info')}}</div>
+                  @endif
                      <div class="row">
+                        @error('Nombre')
+                        <p><strong>{{$message}}</strong></p>
+                        @enderror
                         <div class="col-sm-12">
                            <input class="contactus" placeholder="Nombre" type="text" name="Nombre">
                         </div>
+                        @error('Celular')
+                        <p><strong>{{$message}}</strong></p>
+                        @enderror
                         <div class="col-sm-12">
                            <input class="contactus" placeholder="Celular" type="text" name="Celular">
                         </div>
+                        @error('Email')
+                        <p><strong>{{$message}}</strong></p>
+                        @enderror
                         <div class="col-sm-12">
                            <input class="contactus" placeholder="Email" type="text" name="Email">
                         </div>
+                        @error('Mensaje')
+                        <p><strong>{{$message}}</strong></p>
+                        @enderror
                         <div class="col-sm-12">
-                           <textarea class="textarea" placeholder="Mensaje" type="text" name="Mensaje"></textarea>
+                           <textarea class="textarea" placeholder="Mensaje" rows="4" type="text" name="Mensaje"></textarea>
                         </div>
                         <div class="col-sm-12">
-                           <button class="send">Enviar</button>
+                           <button class="send" type="submit">Enviar</button>
                         </div>
                      </div>
                   </form>

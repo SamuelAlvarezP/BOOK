@@ -9,7 +9,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" >
     <link rel="stylesheet" type="text/css" href="css/estilos.css">
-    
+
     <!--LOGO-->
     <link rel="icon" type="image/x-icon" href="{{asset('images/logo_blanco.png')}}" />
 
@@ -21,7 +21,7 @@
 <!--VALIDACIONES-->
 
     <x-jet-authentication-card>
-        <x-slot name="logo">            
+        <x-slot name="logo">
         </x-slot>
         <x-jet-validation-errors class="mb-3"/>
 
@@ -47,6 +47,23 @@
                                  :value="old('email')" required />
                     <x-jet-input-error for="email"></x-jet-input-error>
                 </div>
+
+                 <!--GRADO -->
+                 <div class="mb-3">
+                 <x-jet-label value="{{ __('Grado') }}" />
+                 <!--VALIDACIONES-->
+                 <select name="group" class="block mt-1 w-full" id="group" :value="old('group')" required>
+                    <option value="" disabled></option>
+                    <option value="Preescolar" {{$this->user->group == 'Preescolar' ? 'selected' : ''}}>PREESCOLAR</option>
+                    <option value="Primero" {{$this->user->group == 'Primero' ? 'selected' : ''}}>PRIMERO</option>
+                    <option value="Segundo" {{$this->user->group == 'Segundo' ? 'selected' : ''}}>SEGUNDO</option>
+                    <option value="Tercero" {{$this->user->group == 'Tercero' ? 'selected' : ''}}>TERCERO</option>
+                    <option value="Cuarto" {{$this->user->group == 'Cuarto' ? 'selected' : ''}}>CUARTO</option>
+                    <option value="Quinto" {{$this->user->group == 'Quinto' ? 'selected' : ''}}>QUINTO</option>
+
+                 </select>
+                 <x-jet-input-error for="group"></x-jet-input-error>
+             </div>
 
                 <!--CONTRASEÑA -->
                 <div class="mb-3">
