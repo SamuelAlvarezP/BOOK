@@ -5,9 +5,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Docente;
 
-
+ //CLASE DOCENTE
 class DocenteController extends Controller
 {
+     //CONSTRUCTOR
     function __construct(){
         $this->middleware('permission:ver-docente | crear-docente | editar-docente | borrar-docente',['only'=> ['index']]);
         $this->middleware('permission:ver-estudiante | crear-estudiante | editar-docente | borrar-docente',['only'=>['index']]);
@@ -22,9 +23,12 @@ class DocenteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+     //FUNCIÓN INDEX (RETORNA UNA VISTA)
     public function index()
     {
        $docente = Docente::all();
+        //RETORNAR DOCENTE.INDEX
         return view('docente.index')->with('docente',$docente);
     }
 
@@ -33,8 +37,10 @@ class DocenteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+     //MÉTODO CREAR
     public function create()
     {
+         //RETORNA A LA VISTA DE CREAR DOCENTE
         return view('docente.crear');
     }
 

@@ -448,13 +448,7 @@ nav.main-menu {
      float: right;
      margin-left: 0;
 }
-.menu-area-main li:hover a,
-.menu-area-main li:focus a {
-     color: #4ac9f0;
-}
-.menu-area-main li.active a {
-     color: #4ac9f0;
-}
+
 .right_cart_section {
      float: right;
      width: auto;
@@ -587,9 +581,6 @@ nav.main-menu {
      font-size: 12px;
      line-height: 15px;
      padding: 5px 0;
-}
-.dropdown-bar .dropdown-link li a:hover {
-     color: #38c8a8;
 }
 .dropdown-bar .dropdown-link li a img {
      margin-right: 7px;
@@ -1118,7 +1109,7 @@ ul.social_icon li a:hover {
      color: #fff;
 }
 .header-top {
-     background: url('../images/fondo2.png.png');
+     background: url('../images/fondo.png');
      background-size: 100% 100%;
      background-repeat: no-repeat;
      padding-bottom: 90px;
@@ -1204,7 +1195,6 @@ ul.social_icon li a:hover {
      width: 18px;
      height: 18px;
      border-radius: 20px;
-     background: #4ac9f0;
      margin: 5px 0px;
 }
 .carousel-indicators .active {
@@ -1215,9 +1205,9 @@ ul.social_icon li a:hover {
      display: none;
 }
 
-/** three box **/
+/** MÓDULOS **/
 .three_box {
-     background: #4ac9f0;
+     background: #ffedbb;
      text-align: center;
      padding: 0px 30px 30px 30px;
 }
@@ -1237,7 +1227,7 @@ ul.social_icon li a:hover {
      padding-left: 0;
 }
 .three_box span {
-     color: #fff;
+     color: rgb(0, 0, 0);
      background: #4ac9f0;
      border-radius: 48px;
      width: 70px;
@@ -1249,7 +1239,7 @@ ul.social_icon li a:hover {
      text-align: center;
 }
 .three_box h3 {
-     color: #fff;
+     color: black;
      font-size: 30px;
      line-height: 25px;
      font-weight: 500;
@@ -1410,7 +1400,6 @@ ul.social_icon li a:hover {
 #main_slider1 .carousel-control-next:hover,
 #main_slider1 .carousel-control-prev:focus,
 #main_slider1 .carousel-control-next:focus {
-     background: #4ac9f0;
      color: #fff;
 }
 #main_slider1 a.carousel-control-prev {
@@ -1458,7 +1447,6 @@ ul.social_icon li a:hover {
 .review .titlepage h2::after {
      position: absolute;
      content: "";
-     background: #4ac9f0;
      width: 100px;
      bottom: -10px;
      left: 0;

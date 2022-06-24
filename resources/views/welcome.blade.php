@@ -471,30 +471,39 @@
                   <div class="titlepage">
                      <h2>CONTÁCTANOS</h2>
                   </div>
+                     <!--REQUERIDO -->
                   <form class="request" action="{{route('contactanos.index')}}" method="POST">
                   @csrf
                   @if (session('info'))
                     <div class="alert alert-success">{{session('info')}}</div>
                   @endif
+                        <!--SE IMPRIMEN LOS ERRORES EN CASO DE QUE EL USUARIO DIGITE ALGO INCORRECTO -->
                      <div class="row">
+                        <!--ERROR NOMBRE -->
                         @error('Nombre')
                         <p><strong>{{$message}}</strong></p>
                         @enderror
                         <div class="col-sm-12">
                            <input class="contactus" placeholder="Nombre" type="text" name="Nombre">
                         </div>
+
+                        <!--ERROR CELULAR -->
                         @error('Celular')
                         <p><strong>{{$message}}</strong></p>
                         @enderror
                         <div class="col-sm-12">
                            <input class="contactus" placeholder="Celular" type="text" name="Celular">
                         </div>
+
+                           <!--ERROR EMAIL -->
                         @error('Email')
                         <p><strong>{{$message}}</strong></p>
                         @enderror
                         <div class="col-sm-12">
                            <input class="contactus" placeholder="Email" type="text" name="Email">
                         </div>
+
+                           <!--ERROR MENSAJE -->
                         @error('Mensaje')
                         <p><strong>{{$message}}</strong></p>
                         @enderror

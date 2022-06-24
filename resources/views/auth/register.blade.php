@@ -50,19 +50,18 @@
 
                  <!--GRADO -->
                  <div class="mb-3">
-                 <x-jet-label value="{{ __('Grado') }}" />
+                 <x-jet-label for="grado" value="{{ __('Grado') }}" />
                  <!--VALIDACIONES-->
-                 <select name="group" class="block mt-1 w-full" id="group" :value="old('group')" required>
-                    <option value="" disabled></option>
-                    <option value="Preescolar" {{$this->user->group == 'Preescolar' ? 'selected' : ''}}>PREESCOLAR</option>
-                    <option value="Primero" {{$this->user->group == 'Primero' ? 'selected' : ''}}>PRIMERO</option>
-                    <option value="Segundo" {{$this->user->group == 'Segundo' ? 'selected' : ''}}>SEGUNDO</option>
-                    <option value="Tercero" {{$this->user->group == 'Tercero' ? 'selected' : ''}}>TERCERO</option>
-                    <option value="Cuarto" {{$this->user->group == 'Cuarto' ? 'selected' : ''}}>CUARTO</option>
-                    <option value="Quinto" {{$this->user->group == 'Quinto' ? 'selected' : ''}}>QUINTO</option>
-
+                 <div class="d-flex">
+                 <select name="group" :value="old('group')" required>
+                    <option value="" disabled selected></option>
+                    <option value="Preescolar">PREESCOLAR</option>
+                    <option value="Primero">PRIMERO</option>
+                    <option value="Segundo">SEGUNDO</option>
                  </select>
-                 <x-jet-input-error for="group"></x-jet-input-error>
+                </div>
+                <x-jet-input-error for="select"></x-jet-input-error>
+
              </div>
 
                 <!--CONTRASEÑA -->

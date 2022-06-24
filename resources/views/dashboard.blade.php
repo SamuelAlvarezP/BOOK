@@ -61,6 +61,11 @@
 
    <!--BODY -->
    <body class="main-layout">
+    @if(session('info'))
+
+        <div class="alert alert-success">{{session('info')}}</div>
+
+    @endif
       <!-- LOADER -->
       <div class="loader_bg">
          <div class="loader"><img src="{{asset('images/loading.gif')}}" alt="#" /></div>
@@ -103,21 +108,6 @@
                            </div>
                         </div>
                      </div>
-
-                      <!-- BARRA DE MENÚ -->
-                     <div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
-                        <div class="menu-area">
-                           <div class="limit-box">
-                              <nav class="main-menu">
-                                 <ul class="menu-area-main">
-                                    <li class="active"> <a href="#testdeaprendizaje">TEST DE APRENDIZAJE</a> </li>
-                                    <li> <a href="#cursos">CURSOS</a> </li>
-                                    <li> <a href="#modulos">MODULOS</a> </li>
-                                 </ul>
-                              </nav>
-                           </div>
-                        </div>
-                     </div>
                   </div>
                </div>
             </div>
@@ -129,7 +119,7 @@
                   <ol class="carousel-indicators">
                   </ol>
 
-                  <!-- TESTB DE APRENDIZAJE -->
+                  <!-- TEST DE APRENDIZAJE -->
                   <div class="carousel-inner">
                      <div class="carousel-item active">
                         <div class="container">
@@ -138,7 +128,7 @@
                                  <div class="col-md-7">
                                     <div class="text-bg">
                                        <span>TEST DE APRENDIZAJE</span>
-                                       <div class=""><a href="../BOOK/login.html">Realizar test</a></div>
+                                       <a class="buttons-login" href="{{route('show.test')}}">Empieza ahora</a>
                                     </div>
                                  </div>
                               </div>
@@ -161,26 +151,41 @@
                   <div class="three_box">
                      <img src="{{asset('images/escritura.png')}}" class="imagen" alt="">
                      <h3>CURSO DE ESCRITURA</h3>
-                     <a href="../BOOK/login.html" class="btn btn-warning disabled">¡Empieza ahora!</a>
+                     @if ($test->user_id == auth()->user()->id)
+                     <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+                    @else
+                    <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+
+                     @endif
                   </div>
                </div>
 
                 <!-- CURSOS LECTURA -->
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padding_l">
-                  <div class="three_box">
-                        <img src="{{asset('images/lectura.png')}}" class="imagen" alt="" >
-                     <h3>CURSO DE LECTURA</h3>
-                     <a href="../BOOK/login.html" class="btn btn-warning disabled">¡Empieza ahora!</a>
-                  </div>
-               </div>
+                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padd_rile">
+                    <div class="three_box">
+                       <img src="{{asset('images/lectura.png')}}" class="imagen" alt="">
+                       <h3>CURSO DE LECTURA</h3>
+                       @if ($test->user_id == auth()->user()->id)
+                       <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+                      @else
+                      <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+
+                       @endif
+                    </div>
+                 </div>
 
                 <!-- MULTIMEDIA -->
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padd_ri">
                   <div class="three_box">
                      <img src="{{asset('images/multimedia.png')}}" class="imagen" alt="">
                      <h3>MULTIMEDIA</h3>
-                     <a href="../BOOK/login.html" class="btn btn-warning disabled">¡Empieza ahora!</a>
-                  </div>
+                     @if ($test->user_id == auth()->user()->id)
+                     <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+                    @else
+                    <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+
+                     @endif
+                    </div>
                </div>
             </div>
          </div>
@@ -203,8 +208,13 @@
                      <img src="{{asset('images/quiz.jpg')}}" class="imagen" alt="">
                      <h3>QUIZ</h3>
                      <br>
-                     <a href="../BOOK/login.html" class="btn btn-warning disabled">¡Empieza ahora!</a>
-                  </div>
+                     @if ($test->user_id == auth()->user()->id)
+                     <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+                    @else
+                    <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+
+                     @endif
+                    </div>
                </div>
 
                 <!-- JUEGOS -->
@@ -213,8 +223,13 @@
                      <img src="{{asset('images/juegos.png')}}" class="imagen" alt="">
                      <h3>JUEGOS</h3>
                      <br>
-                     <a href="../BOOK/login.html" class="btn btn-warning disabled">¡Empieza ahora!</a>
-                  </div>
+                     @if ($test->user_id == auth()->user()->id)
+                     <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+                    @else
+                    <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+
+                     @endif
+                    </div>
                </div>
 
                <!-- LOGROS -->
@@ -223,8 +238,13 @@
                      <img src="{{asset('images/logros.png')}}" class="imagen" alt="">
                      <h3>LOGROS</h3>
                      <br>
-                     <a href="../BOOK/login.html" class="btn btn-warning disabled">¡Empieza ahora!</a>
-                  </div>
+                     @if ($test->user_id == auth()->user()->id)
+                     <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+                    @else
+                    <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+
+                     @endif
+                    </div>
                </div>
             </div>
          </div>

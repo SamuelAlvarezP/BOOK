@@ -10,6 +10,7 @@ use App\Http\Controllers\RolController;
 use App\Http\Controllers\UsuarioController;
 use App\Http\Controllers\DocenteController;
 use App\Http\Controllers\EstudianteController;
+use App\Http\Controllers\TestController;
 use Illuminate\Support\Facades\Auth;
 
 /*
@@ -23,6 +24,7 @@ use Illuminate\Support\Facades\Auth;
 |
 */
 
+//RUTA DE LOS CONTROLADORES
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
@@ -40,20 +42,26 @@ Route::group(['middleware' => ['auth']],function(){
  Route::resource('estudiante',EstudianteController::class);
  Route::resource('docente',DocenteController::class);
  Route::resource('cursos',CursosController::class);
+ Route::controller(TestController::class)->group(function(){
+    Route::get('test','showTest')->name('show.test');
+    Route::post('test/store','store')->name('test');
+ });
 });
 
+//RUTA DE DOCENTE.EDITAR
 Route::get('/docente.editar', function(){
     return view('docente');
 })->name('docente');
 
+//RUTA DE ESTUDIANTE.EDITAR
 Route::get('/estudiante.editar', function(){
     return view('estudiante');
 })->name('estudiante');
 
+//RUTA DE CONTACTANOS
 Route::post('contactanos', [ContactanosController::class,'store'])->name('contactanos.index');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
-})->name('dashboard');
+//RUTA DE VERIFICAR
+Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', [HomeController::class,'dashboard'])->name('dashboard');
 
 

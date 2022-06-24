@@ -21,16 +21,18 @@
                                   <th style="color:bisque">Acciones</th>
                                  </thead>
                                   <tbody>
+                                       <!--RECORRE TODOS LOS REGISTROS DE ROLES-->
                                       @foreach($roles as $role)
                                          <tr>
 
                                              <td>{{$role->name}}</td>
 
                                              <td>
+                                            <!--EDITAR ROL -->
                                              @can('editar-rol')
                                                  <a href="{{ route('roles.edit',$role->id)}}" class="btn btn-warning">Editar</a>
                                              @endcan
-
+                                              <!--ELIMINAR ROL -->
                                               @can('borrar-rol')
                                               {!! Form::open(['method'=>'DELETE','route'=>['roles.destroy',$role->id],'style'=>'display:inline']) !!}
                                               {!! Form::submit('Borrar',['class'=>'btn btn-danger']) !!}
