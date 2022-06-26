@@ -128,7 +128,11 @@
                                  <div class="col-md-7">
                                     <div class="text-bg">
                                        <span>TEST DE APRENDIZAJE</span>
+                                       @if ($test->count() > 0)
+                                       <button class="btn btn-dark disabled">Test de aprendizaje realizado con éxito</button>
+                                       @else
                                        <a class="buttons-login" href="{{route('show.test')}}">Empieza ahora</a>
+                                       @endif
                                     </div>
                                  </div>
                               </div>
@@ -151,12 +155,13 @@
                   <div class="three_box">
                      <img src="{{asset('images/escritura.png')}}" class="imagen" alt="">
                      <h3>CURSO DE ESCRITURA</h3>
-                     @if ($test->user_id == auth()->user()->id)
-                     <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
-                    @else
-                    <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
 
-                     @endif
+                    @if ($test->count() > 0)
+                        <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+                    @else
+                        <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+
+                        @endif
                   </div>
                </div>
 
@@ -165,10 +170,11 @@
                     <div class="three_box">
                        <img src="{{asset('images/lectura.png')}}" class="imagen" alt="">
                        <h3>CURSO DE LECTURA</h3>
-                       @if ($test->user_id == auth()->user()->id)
-                       <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
-                      @else
-                      <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+
+                        @if ($test->count() > 0)
+                            <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+                         @else
+                            <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
 
                        @endif
                     </div>
@@ -179,14 +185,14 @@
                   <div class="three_box">
                      <img src="{{asset('images/multimedia.png')}}" class="imagen" alt="">
                      <h3>MULTIMEDIA</h3>
-                     @if ($test->user_id == auth()->user()->id)
-                     <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+
+                    @if ($test->count() > 0)
+                        <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
                     @else
-                    <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+                        <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
 
                      @endif
-                    </div>
-               </div>
+                    </div>               </div>
             </div>
          </div>
       </div>
@@ -208,12 +214,12 @@
                      <img src="{{asset('images/quiz.jpg')}}" class="imagen" alt="">
                      <h3>QUIZ</h3>
                      <br>
-                     @if ($test->user_id == auth()->user()->id)
-                     <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
-                    @else
-                    <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
 
-                     @endif
+                    @if ($test->count() > 0)
+                        <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+                    @else
+                        <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+                    @endif
                     </div>
                </div>
 
@@ -223,14 +229,15 @@
                      <img src="{{asset('images/juegos.png')}}" class="imagen" alt="">
                      <h3>JUEGOS</h3>
                      <br>
-                     @if ($test->user_id == auth()->user()->id)
-                     <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+
+                     @if ($test->count() > 0)
+                        <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
                     @else
-                    <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+                        <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
 
                      @endif
                     </div>
-               </div>
+                   </div>
 
                <!-- LOGROS -->
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padding_l">
@@ -238,14 +245,14 @@
                      <img src="{{asset('images/logros.png')}}" class="imagen" alt="">
                      <h3>LOGROS</h3>
                      <br>
-                     @if ($test->user_id == auth()->user()->id)
-                     <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
+
+                     @if ($test->count() > 0)
+                        <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
                     @else
-                    <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
+                        <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
 
                      @endif
-                    </div>
-               </div>
+                    </div>               </div>
             </div>
          </div>
       </div>

@@ -27,6 +27,6 @@ class TestController extends Controller
         $test->aprendizaje = $request;
         $test->user_id = auth()->user()->id;
         $test->save();
-        return redirect()->view('dashboard',compact('test'))->with('info','Test de aprendizaje completo');
+        return redirect()->route('dashboard')->with('info','Test de aprendizaje completo');
     }
 }

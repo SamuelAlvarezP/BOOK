@@ -5,8 +5,8 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Cursos extends Model
+class Curso extends Model
 {
     use HasFactory;
-    protected $fillable = ['id_curso','nombre_curso','descripcion_curso'];
+    protected $fillable = ['nombre_curso','tipo_curso'];
 }

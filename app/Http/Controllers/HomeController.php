@@ -27,7 +27,7 @@ class HomeController extends Controller
         return view('home');
     }
     public function dashboard(){
-        $test = Test::all();
+        $test = Test::where('user_id',auth()->user()->id);
         return view('dashboard',compact('test'));
     }
 }

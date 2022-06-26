@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\ContactanosController;
 use App\Http\Controllers\CursosController;
 use Illuminate\Support\Facades\Route;
@@ -46,6 +47,7 @@ Route::group(['middleware' => ['auth']],function(){
     Route::get('test','showTest')->name('show.test');
     Route::post('test/store','store')->name('test');
  });
+ Route::get('/admin',[AdminController::class,'index'])->name('admin.home');
 });
 
 //RUTA DE DOCENTE.EDITAR

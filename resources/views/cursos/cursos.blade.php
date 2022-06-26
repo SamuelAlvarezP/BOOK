@@ -1,41 +1,44 @@
 @extends('adminlte::page');
-@section('title','Usuarios')
+@section('title','Cursos')
 @section('css')
 <link href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 @endsection
 
 @section('content_header')
-    <h1>Usuarios</h1>
+    <h1>Cursos</h1>
 @endsection
 @section('content')
+@if (session('info'))
+    <div class="alert alert-success">{{session('info')}}</div>
+@endif
 
-<a href="usuarios/create" class="btn btn-primary">Crear</a>
+<a href="{{route('cursos.create')}}" class="btn btn-primary">Crear</a>
 
 <p>   </p>
 <table id="usuario" class="table table-dark table-striped mt-4" style="width:100%">
 <thead class="bg-primary text-white">
         <tr>
-            <th scope="col">id usuario</th>
-            <th scope="col">nombre</th>
-            <th scope="col">email</th>
+            <th scope="col">Id curso</th>
+            <th scope="col">Nombre del curso </th>
+            <th scope="col">Tipo de curso</th>
             <th scope="col">Acciones</th>
 
         </tr>
     </thead>
     <tbody>
-    @foreach ($usuario as $usuario)
+    @foreach ($cursos as $curso)
             <tr>
-                <td>{{$usuario->id}}</td>
-                <td>{{$usuario->name}}</td>
-                <td>{{$usuario->email}}</td>
+                <td>{{$curso->id}}</td>
+                <td>{{$curso->nombre_curso}}</td>
+                <td>{{$curso->tipo_curso}}</td>
 
                 <td>
-                <form action="{{ route ('usuarios.destroy',$usuario->id)}}" method="POST">
-                    <a href="/usuarios/{{$usuario->id}}/edit" class="btn btn-info">Editar</a>
+                <form action="{{ route ('cursos.destroy',$curso)}}" method="POST">
+                    <a href="{{route('cursos.edit',$curso)}}" class="btn btn-info">Editar</a>
                      @csrf
                      @method('DELETE')
                     <button class="btn btn-danger" type="submit" onclick="
-                    return confirm('¿Quieres eliminar este usuario?')">Eliminar</button>
+                    return confirm('¿Quieres eliminar este registro?')">Eliminar</button>
                     </form>
                 </td>
             </tr>

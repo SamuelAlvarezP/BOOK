@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Curso;
 use Illuminate\Http\Request;
-use App\Models\Cursos;
 
 class CursosController extends Controller
 {
@@ -14,8 +14,8 @@ class CursosController extends Controller
      */
     public function index()
     {
-        $cursos = Cursos::all();
-        return view('cursos.index')->with('cursos',$cursos);
+        $cursos = Curso::all();
+        return view('cursos.cursos',compact('cursos'));
 
     }
 
@@ -37,7 +37,16 @@ class CursosController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'nombre_curso' => 'required|alpha',
+            'tipo_curso' => 'required'
+        ]);
+
+        $input = $request->all();
+
+        $cursos = Curso::create($input);
+
+        return redirect()->route('cursos.index')->with('info','Curso creaedo con éxito');
     }
 
     /**
@@ -48,7 +57,7 @@ class CursosController extends Controller
      */
     public function show($id)
     {
-        //
+
     }
 
     /**
@@ -57,9 +66,9 @@ class CursosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Curso $cursos)
     {
-        //
+        return view('cursos.editar',compact('cursos'));
     }
 
     /**
@@ -69,7 +78,7 @@ class CursosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Curso $cursos)
     {
         //
     }
@@ -80,8 +89,11 @@ class CursosController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function destroy($id)
+    public function destroy(Curso $curso)
     {
-        //
+        $curso->delete();
+        return redirect()->route('cursos.index')->with('info','Curso eliminado con éxito');
+
+
     }
 }
