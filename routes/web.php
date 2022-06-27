@@ -41,7 +41,10 @@ Route::group(['middleware' => ['auth']],function(){
  Route::resource('roles',RolController::class);
  Route::resource('usuarios',UsuarioController::class);
  Route::resource('estudiante',EstudianteController::class);
- Route::resource('docente',DocenteController::class);
+ Route::controller(DocenteController::class)->group(function(){
+    Route::resource('docente',DocenteController::class);
+    Route::get('/dashboard/docente','Docente')->name('docente.index');
+ });
  Route::resource('cursos',CursosController::class);
  Route::controller(TestController::class)->group(function(){
     Route::get('test','showTest')->name('show.test');

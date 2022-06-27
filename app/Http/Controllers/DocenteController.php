@@ -156,4 +156,7 @@ class DocenteController extends Controller
         Docente::find($id)->delete();
         return redirect()->route('docente.index');
     }
+    public function Docente(){
+        return view('docente_dashboard');
+    }
 }
