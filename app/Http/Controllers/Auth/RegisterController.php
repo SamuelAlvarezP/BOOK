@@ -70,6 +70,6 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'group' => $data['group'],
             'password' => Hash::make($data['password']),
-        ]);
+        ])->assignRole('Estudiante');
     }
 }

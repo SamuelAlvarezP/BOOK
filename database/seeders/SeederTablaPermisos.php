@@ -47,7 +47,7 @@ class SeederTablaPermisos extends Seeder
         ];
         $permisos3 = [
             'dashboard',
-            'show.test'
+            'show.test',
         ];
         foreach($permisos1 as $permiso){
             Permission::create(['name'=>$permiso])->syncRoles([$role1]);
