@@ -37,7 +37,7 @@
           <tr>
             <form action="{{route('test')}}" method="post">
                 @csrf
-              <td><strong>¿Qué tete gusta más en tu cumpleaños?</strong></td>
+              <td><strong>¿Qué te gusta más en tu cumpleaños?</strong></td>
               <td>
                 <div class="form-check">
                     <label class="form-check-label">

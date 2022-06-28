@@ -7,6 +7,7 @@ use Illuminate\Database\Seeder;
 
 //spatie
 use Spatie\Permission\Models\Permission;
+use Spatie\Permission\Models\Role;
 
 class SeederTablaPermisos extends Seeder
 {
@@ -17,7 +18,10 @@ class SeederTablaPermisos extends Seeder
      */
     public function run()
     {
-        $permisos = [
+        $role1 = Role::create(['name' => 'Administrador']);
+        $role2 = Role::create(['name' => 'Estudiante']);
+        $role3 = Role::create(['name' => 'Docente']);
+        $permisos1 = [
             //tabla de roles
             'ver-rol',
             'crear-rol',
@@ -36,8 +40,24 @@ class SeederTablaPermisos extends Seeder
             'editar-estudiante',
             'borrar-estudiante',
         ];
-        foreach($permisos as $permiso){
-            Permission::create(['name'=>$permiso]);
+        $permisos2 = [
+            'docente.cursos.escritura',
+            'mostrar.publicacion',
+
+        ];
+        $permisos3 = [
+            'dashboard',
+            'show.test'
+        ];
+        foreach($permisos1 as $permiso){
+            Permission::create(['name'=>$permiso])->syncRoles([$role1]);
         }
+        foreach($permisos2 as $permiso){
+            Permission::create(['name'=>$permiso])->syncRoles([$role3]);
+        }
+        foreach($permisos3 as $permiso){
+            Permission::create(['name'=>$permiso])->syncRoles([$role2]);
+        }
+
     }
 }

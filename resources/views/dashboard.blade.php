@@ -204,25 +204,7 @@
             </div>
          </div>
       </div>
-
-                  <!-- QUIZ-->
-                <div id="modulos" class="back_box">
-                  <div class="container-fluid">
-                     <div class="row">
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padd_rile">
-                  <div class="three_box">
-                     <img src="{{asset('images/quiz.jpg')}}" class="imagen" alt="">
-                     <h3>QUIZ</h3>
-                     <br>
-
-                    @if ($test->count() > 0)
-                        <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
-                    @else
-                        <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
-                    @endif
-                    </div>
-               </div>
-
+      
                 <!-- JUEGOS -->
                <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padding_l">
                   <div class="three_box">
@@ -239,20 +221,6 @@
                     </div>
                    </div>
 
-               <!-- LOGROS -->
-               <div class="col-xl-4 col-lg-4 col-md-4 col-sm-12 padding_l">
-                  <div class="three_box">
-                     <img src="{{asset('images/logros.png')}}" class="imagen" alt="">
-                     <h3>LOGROS</h3>
-                     <br>
-
-                     @if ($test->count() > 0)
-                        <a href="../BOOK/login.html" class="btn btn-danger">¡Empieza ahora!</a>
-                    @else
-                        <a href="../BOOK/login.html" class="btn btn-danger disabled">¡Empieza ahora!</a>
-
-                     @endif
-                    </div>               </div>
             </div>
          </div>
       </div>

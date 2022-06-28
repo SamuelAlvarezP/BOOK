@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Curso;
+use App\Models\Cursos;
 use Illuminate\Http\Request;
 use App\Models\Docente;
 
@@ -159,4 +161,14 @@ class DocenteController extends Controller
     public function Docente(){
         return view('docente_dashboard');
     }
+        public function cursosDocente(){
+        $cursos = Curso::where('tipo_curso','Lectura')->get();
+        return view('docente.mostrar_lectura',compact('cursos'));
+    }
+    public function cursosDocenteEscritura(){
+        $cursos = Curso::where('tipo_curso','Escritura')->get();
+        return view('docente.mostrar_escritura',compact('cursos'));
+    }
+
+
 }
